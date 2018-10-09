@@ -1,6 +1,6 @@
 
 
-<footer>
+	<footer>
 			<div class="container footer_about">
 				<div class="row">
 					<div class="col-md-3 link">

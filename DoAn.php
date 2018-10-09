@@ -95,14 +95,7 @@
 		</div>
 	</section>
 	<!-----------------------chia tung cot cong ty----------------------------------->
-	<?php
-if (!isset($_GET['page'])) {
-  $page = 1;
-} else {
-  $page = $_GET['page'];
-}
-  
-	?>
+	
 	<section>
 		<div class="container">
 			<h3>Nhà Tuyển Dụng</h3>
@@ -116,16 +109,17 @@ if (!isset($_GET['page'])) {
 					while($row = mysqli_fetch_array($img))
 					{			
 						?>
-						<div class="CongTy">
-							<a class="imga col-md-4" href="login.php" >	
-								<h2 class="namecomp"> <?php echo $row["TenCongTy"]; ?> </h2>		
-								<img class="back-gr" src=" <?php echo $row["AnhCongTy"];?> " style="width:300px; height:300px;">
+						<form method="get" action="congty.php">
+							<a class="imga col-md-4" href="congty.php?idCongTy=<?php echo $row['id'];?>">	 
+								<h2 class="namecomp"> <?php echo $row["TenCongTy"]; ?> </h2>	
+								
+								<img class="back-gr" src=" <?php echo $row["AnhCongTy"];?> " style="width:350px; height:300px;">
 							</a>
-						</div>
+						</form>
 						<?php
 					}
 					?><br><br>
-				
+			
 				
 
 
