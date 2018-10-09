@@ -1,0 +1,107 @@
+/*-nav-------------------------------------*/
+nav{
+	
+}
+nav a{
+	color: black;
+	
+}
+.menu{
+	border-bottom:1px solid #ddd;
+	padding-top: 25px;
+}
+.home{
+	margin-top: -22px !important;
+}
+/*----------header--------------------------*/
+header{
+	
+}
+header .search{
+	border-bottom: 1px solid #ddd;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+/*-------section tung cong ty --*/
+section .imga:hover{
+	opacity: 0.5;
+}
+
+.h2{
+	top: 100px;
+	left: 120px;
+	position: absolute;
+}
+.ctyrow2{
+	margin-top: 50px;
+}
+/*------nav-menu--------*/
+
+.nav_menu {
+	border-bottom: 1px solid #e5e5e5;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.nav_menu a{
+	color: black;
+}
+/*--------------form tuyen nha vien------------------------------*/
+
+
+
+
+/*-------pagination-----------------------------*/
+.page{
+    text-align: center;
+    margin-top: 60px;
+	border-top:1px solid #e5e5e5;   
+	margin-bottom: 30px;
+}
+.page li{
+    
+    display: inline;
+}
+.pagination{
+   
+    padding-top: 40px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+.pagination a{
+
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+}
+.pagination a:hover{
+    text-decoration: none;
+    color:#ffffff ;
+    background: #bce7f1;
+}
+/*----------footer--------------------------------------*/
+footer{
+	border: 1px solid #e5e5e5;
+	 background-color:#C7CEDF;
+}
+footer ul{
+	margin-left: -30px !important;
+}
+footer a, h4{
+	color: black;
+}
+
+
+.rim-square-fb, .rim-square-gg{
+	border:1px solid #e5e5e5;
+	padding: 3px;
+}
+.copyright{
+    width: 100% ;
+    display:block;
+    text-align: center;
+    color: #f4f5f5;
+    background-color:#0055A8;
+    bottom: 0;
+    padding:20px 0;
+}
+
+
