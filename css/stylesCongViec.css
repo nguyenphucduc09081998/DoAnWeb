@@ -1,0 +1,14 @@
+.header_CongTy{
+	margin-top: 20px;
+}
+.Anhheadder{
+	padding-top: 20px;
+	width:100%; height:500px;
+}
+.Profile{
+	border: 1px solid #ddd;
+	width: 90%; height:200px;
+}
+.header_CongTy .thongtin{
+	font-size: 30px;
+}
