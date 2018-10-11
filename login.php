@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('serverLogin_Register.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

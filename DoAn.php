@@ -23,7 +23,7 @@ include('header.php');
 						
 						<form  method="get" action="congty.php">
 						
-							<a class="imga col-md-4" href="congty.php?idCongTy=<?php echo $row['MaCongTy'];?>">	
+							<a class="col-md-4 imga" href="congty.php?idCongTy=<?php echo $row['MaCongTy'];?>">	
 								<div class="a">		
 									<?php
 										

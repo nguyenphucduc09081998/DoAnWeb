@@ -22,15 +22,18 @@
 	padding: 30px;
 	background: #ddd;
 }
-.chung{
+.congty_chung{
 	margin-top: 20px;
 	
 }
-.chung a{
+.tencongviec_tencongty .tencongviec{
 	text-decoration: none;
 	color: black;
 }
-
+.tencongviec_tencongty .chitietcongviec{
+	text-decoration: none;
+	color: black;
+}
 .tencongviec h5{
 	font-size: 30px;
 	text-align:center;
@@ -42,7 +45,7 @@
 .chitietcongviec h6{
 	font-size: 20px;
 	text-align:center;
-	
+	color: black;
 }
 
 

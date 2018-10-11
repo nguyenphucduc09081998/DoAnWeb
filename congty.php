@@ -1,20 +1,21 @@
 <?php
 include('header.php');
 ?>
-	<link rel="stylesheet" href="css/stylesCongTy.css">
-
+	
+	
 <section>
 	<div class="container">
 		<div class="row">
 		<?php
 			$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 					//mysqli_select_db("datawed");
+					mysqli_set_charset($db, "utf8");
 			$a = $_GET['idCongTy'];
 		//2 dong nay de ay du lieu don gian
 			$res =  mysqli_query($db,"SELECT  * FROM congty WHERE  MaCongTy = $a");
 			$res1 = mysqli_fetch_array($res);
 			
-			$result = mysqli_query($db,"SELECT DISTINCT TenCongViec,MaCongViec FROM congviec WHERE  MaCongTy = $a ");	
+			$result = mysqli_query($db,"SELECT DISTINCT TenCongViec,MaCongViec,MucLuongCongViec,YeuCauCongViec FROM congviec WHERE  MaCongTy = $a ");	
 			?>
 			<img class="Anhheadder" alt="Profile" src="<?php echo $res1['AnhCongTy'];?>" >
 			
@@ -40,14 +41,14 @@ include('header.php');
 			{		
 		?>
 			
-			<div class="col-md-6 chung ">
+			<div class="col-md-6 congty_chung ">
 				<div class="tencongviec_tencongty">
 					<a class="tencongviec" href="/congviec.php?idCongViec= <?php echo $row['MaCongViec']; ?>"> 
 						<h5 ><?php echo $row["TenCongViec"]; ?> </h5>
 					</a>
 					<a class="chitietcongviec">
-						<h6><?php echo $res1['TenCongTy'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
-						<h6>dsfasf</h6>
+						<h6><?php echo $row['MucLuongCongViec'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
+						<h6><?php echo $row['YeuCauCongViec'];?></h6>
 					</a>
 				</div>
 			</div>

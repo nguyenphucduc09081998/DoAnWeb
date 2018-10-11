@@ -9,6 +9,16 @@
 	border: 1px solid #ddd;
 	width: 90%; height:200px;
 }
-.header_CongTy .thongtin{
+.congviec_full{
+	margin-top: 30px;
+}
+.congviec_thongtin{
 	font-size: 30px;
+	border: 1px solid #ddd;
+	padding-bottom: 30px;
+}
+.aaa{
+	height:50px;
+	width: 130px;
+margin: auto;
 }

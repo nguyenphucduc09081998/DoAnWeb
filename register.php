@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('serverLogin_Register.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +16,7 @@
 				</div>
 				<div class="col-md-6">
 					<form  method="post" action="register.php" class="form_register">
-						<?php include('errors.php'); ?>
+						<?php include('errors.php'); ?><!----de bao ------>
 						<br><br>
 						<h2>Register</h2>
 						

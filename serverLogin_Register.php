@@ -6,7 +6,7 @@ session_start();
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'datawed');
+$db = mysqli_connect('localhost', 'root', '', 'dataweb');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -35,8 +35,6 @@ if (isset($_POST['reg_user'])) {
     if ($user['username'] === $username) {
       array_push($errors, "Username already exists");
     }
-
-  
   }
 
   // Finally, register user if there are no errors in the form
@@ -73,8 +71,8 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
-			echo"Login thanh cong";
-	  /*header('location: index.php');*/
+			
+	  header('location: /DoAn.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
 		echo"Login ko thanh cong";
@@ -83,3 +81,17 @@ if (isset($_POST['login_user'])) {
 }
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

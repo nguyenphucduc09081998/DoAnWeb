@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	
+	<meta  charset="utf-8"/>
 	<title>Trang Chu</title>
 	<link rel="stylesheet" href="css/stylesHeader.css">
-	
-
+	<link rel="stylesheet" href="css/stylesCongTy.css">
+	<link rel="stylesheet" href="css/stylesCongViec.css">
+	<link rel="stylesheet" href="css/stylesformNguoiXinViec.css">
 	<link rel="stylesheet" href="css/stylesFooter.css">
-<link rel="stylesheet" href="css/stylesCongTy.css">
-	<link rel="stylesheet" href="css/bootstrap1.min.css">
+	<link rel="stylesheet" href="css/stylesRegister.css">
+	<link rel="stylesheet" href="css/stylesLogin.css">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -42,10 +44,10 @@
 				</div>
 				<div class="col-md-2">
 					<!---<a data-toggle="modal" href="#myModal" ><img src="images/password.png" height="25" width="25" />Đăng Nhập</a>-->
-					<a id="dangnhap" href="http://doanwed.test/Registration/login.php" <!--target="targetframe"--> <img src="images/password.png" height="25" width="25" />Đăng Nhập</a>
+					<a id="dangnhap" href="/login.php" <!--target="targetframe"--> <img src="images/password.png" height="25" width="25" />Đăng Nhập</a>
 				</div>
 				<div class="col-md-2">
-					<a id="dangki" href="http://doanwed.test/Registration/register.php" <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25"/>Đăng Xuất </a>	
+					<a id="dangki" href="/register.php" <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25"/>Đăng Xuất </a>	
 				</div>	
 			</div>
 		</div>

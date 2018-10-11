@@ -1,14 +1,16 @@
 <?php
 include('header.php');
 ?>
-	<link rel="stylesheet" href="css/stylesCongViec.css">
+	
 <section>
 	<div class="container">
 		<div class="row">
 		<?php
 			$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 					//mysqli_select_db("datawed");
+						mysqli_set_charset($db, "utf8");
 			$a = $_GET['idCongViec'];
+		
 			//2 dong phu
 			$res =  mysqli_query($db,"SELECT  * FROM congty WHERE  MaCongTy = $a");
 			$res1 = mysqli_fetch_array($res);
@@ -18,34 +20,25 @@ include('header.php');
 			
 				
 			?>
-			<img class="Anhheadder" alt="Profile" src="<?php echo $result1['AnhNoiLamViec'];?>" >
+			
+			<img class="Anhheadder" alt="Profile" src="<?php echo $result1['AnhCongViec'];?>" >
 		
-			<div class="header_CongTy">
-				<div class="col-md-4">
-					<img class="Profile" alt="Profile" src="<?php echo $res1['IconCongTy'];?>" >
-				</div>
-				<div class="col-md-8 thongtin" >
-					<p><b>Tên Công Ty: &nbsp <?php echo $result1['TenCongViec'];?></b></p>
-					<p>Mô Tả : &nbsp <?php echo $result1['MoTaCongViec'];?></p>
-					<p>Yêu Cầu Công Việc: &nbsp <?php echo $result1['YeuCauCongViec'];?> </p>
-					<p>Số Lượng: &nbsp <?php echo $result1['SoLuongCongViec'];?></p>
-					<p>Mức Lương: &nbsp <?php echo $result1['MucLuongCongViec'];?></p>
+			<div class="congviec_full">
+				
+				<div class="col-md-12 congviec_thongtin" >
+					<p class="tencongviec"><b>Tên Công Ty: &nbsp </b><?php echo $result1['TenCongViec'];?></p>
+					<p><b>Mô Tả : &nbsp </b><?php echo $result1['MoTaCongViec'];?></p>
+					<p><b>Yêu Cầu Công Việc: &nbsp </b><?php echo $result1['YeuCauCongViec'];?> </p>
+					<p><b>Số Lượng: &nbsp</b> <?php echo $result1['SoLuongCongViec'];?></p>
+					<p><b>Mức Lương: &nbsp </b><?php echo $result1['MucLuongCongViec'];?></p>
+					<form action="/NguoiXinViec.php">
+						
+					</form>
+					
+					<a href="/formNguoiXinViec.php?idMaCongViec=<?php echo $result1['MaCongViec']; ?>"><button type="button" class="btn btn-success aaa" href="">Ứng Tuyển</button></a>
 
 				</div>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 		</div>
 	</div>
