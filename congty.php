@@ -33,7 +33,7 @@ include('header.php');
 			</div>
 		</div>
 		<h3 class="ten_congty"> Những Công Việc Đang Tuyển Của Công Ty <?php  echo $res1['TenCongTy'];?></h3>
-		<div class="row">
+		<div class="row show_congviec">
 			
 			<?php
 			
@@ -41,7 +41,7 @@ include('header.php');
 			{		
 		?>
 			
-			<div class="col-md-6 congty_chung ">
+			<div class="col-md-8 congty_chung ">
 				<div class="tencongviec_tencongty">
 					<a class="tencongviec" href="/congviec.php?idCongViec= <?php echo $row['MaCongViec']; ?>"> 
 						<h5 ><?php echo $row["TenCongViec"]; ?> </h5>

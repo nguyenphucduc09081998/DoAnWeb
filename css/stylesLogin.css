@@ -2,10 +2,12 @@ body h1{
 	text-align: center;
 	font: bold ;
 }
-section .form_login{
+.form_login{
 	margin-top: 20px;
-	border: 1px solid #e5e5e5;	
-	padding: 10px;
+	border: 2px solid #e5e5e5;	
+	padding: 20px;
+	margin: 30px;
+
 }
 input[type=text], input[type=password] {
     width: 100%;
@@ -28,3 +30,4 @@ button {
 button:hover {
     opacity: 0.5;
 }
+

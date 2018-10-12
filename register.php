@@ -3,10 +3,8 @@
 <html>
 <head>
   <title>Registration</title>
- 	<link rel="stylesheet" href="stylesRegister.css">
-
-	<link rel="stylesheet" href="bootstrap1.min.css">
-	
+ <link rel="stylesheet"  type="text/css" href="css/stylesRegister.css"
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<section>
@@ -30,7 +28,7 @@
 						<input type="password" name="password_2" placeholder="Confirm Password"><br>
 						
 						 <button type="submit" class="btn" name="reg_user">Register</button><br>
-						<p>Already a member? <a href="file:///D:/DoAnWed/Login.html">Sign in</a></p> <br>
+						<p>Already a member? <a href="/login.php">Sign in</a></p> <br>
 						
 					</form>
 				</div>

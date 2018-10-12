@@ -11,12 +11,12 @@ $db = mysqli_connect('localhost', 'root', '', 'dataweb');
 // REGISTER USER
 if (isset($_POST['NapHoSo'])) {
   // receive all input values from the form
-  $Ten =  $_POST['Ten'];
- $Email = $_POST['Email'];
-  $SoDienThoai =  $_POST['SoDienThoai'];
-  $KinhNghiem = $_POST['KinhNghiem'];
-  $TrinhDo =  $_POST['TrinhDo'];
-
+	$Ten =  $_POST['Ten'];
+	$Email = $_POST['Email'];
+	$SoDienThoai =  $_POST['SoDienThoai'];
+	$KinhNghiem = $_POST['KinhNghiem'];
+	$TrinhDo =  $_POST['TrinhDo'];
+	//$MaCongViec = $_POST['MaCongViec'];
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($Ten)) { array_push($errors, "chua nhap ten"); }
@@ -27,11 +27,8 @@ if (isset($_POST['NapHoSo'])) {
  
 $pattern = '#^[a-z][a-z0-9\._]{2,31}@[a-z0-9\-]{3,}(\.[a-z]{2,4}){1,2}$#';
 	if(preg_match($pattern, $Email, $match) == 0){
-		array_push($errors, "e mail nhap khong hơp lệ");
+		array_push($errors, " Email nhap khong hơp lệ");
 }
-
-
-
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
@@ -56,8 +53,17 @@ mysqli_set_charset($db, "utf8");
   	//$_SESSION['username'] = $username;
   	//$_SESSION['success'] = "You are now logged in";
 	
-	echo "nap  thanh cong";
-	/*header('location: index.php');*/
+	//echo "nap  thanh cong";
+	?>
+	
+	<h2 style="font-size: 30px; margin:auto;">
+	<?php echo "Nạp Hồ sơ thành công"; ?>
+	</h2>
+	
+	<?php
+	sleep(3);
+	header('location: /DoAn.php');
+	
   }
 }
 

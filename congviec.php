@@ -26,7 +26,7 @@ include('header.php');
 			<div class="congviec_full">
 				
 				<div class="col-md-12 congviec_thongtin" >
-					<p class="tencongviec"><b>Tên Công Ty: &nbsp </b><?php echo $result1['TenCongViec'];?></p>
+					<p class="tencongviec"><b>Tên Công việc: &nbsp </b><?php echo $result1['TenCongViec'];?></p>
 					<p><b>Mô Tả : &nbsp </b><?php echo $result1['MoTaCongViec'];?></p>
 					<p><b>Yêu Cầu Công Việc: &nbsp </b><?php echo $result1['YeuCauCongViec'];?> </p>
 					<p><b>Số Lượng: &nbsp</b> <?php echo $result1['SoLuongCongViec'];?></p>
