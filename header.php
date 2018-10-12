@@ -79,16 +79,16 @@
 				<div class="col-md-2">
 				</div>
 				<div class="col-md-2">
-					<a href="#" title="Ngành IT" >Công Nghệ Thông Tin</a>
+					<a href="/NganhCNTT.php" title="Ngành IT" >Công Nghệ Thông Tin</a>
 				</div>
 				<div class="col-md-2">
-					<a href="#" title="Ngành IT">Điện Tử - Kĩ Thuật</a>
+					<a href="/NganhDienTu.php" title="Ngành DTKT">Điện Tử - Kĩ Thuật</a>
 				</div>
 				<div class="col-md-2">
-					<a href="#" title="Ngành IT">Ngân Hàng - Tài Chính</a>
+					<a href="/NganhNganHTaiC.php" title="Ngành NHTC">Ngân Hàng - Tài Chính</a>
 				</div>
 				<div class="col-md-2">
-					<a href="#" title="Ngành IT">Kinh Tế </a>
+					<a href="/NganhKinhTe.php" title="Ngành KT">Kinh Tế </a>
 				</div>
 				<div class="col-md-2">
 				</div>

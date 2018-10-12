@@ -16,31 +16,24 @@ include('header.php');
 					
 					
 					
-					
 					while($row = mysqli_fetch_array($img))
 					{			
+						$b =  $row['MaCongTy'];
+						$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b ");
+						$cou1 = mysqli_fetch_array($cou);
+						if(($cou1['soluong']) >= 1 ){
 						?>
-						
 						<form  method="get" action="congty.php">
-						
-							<a class="col-md-4 imga" href="congty.php?idCongTy=<?php echo $row['MaCongTy'];?>">	
-								<div class="a">		
-									<?php
-										
-									 $b =  $row['MaCongTy'];
-										$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b ");
-										$cou1 = mysqli_fetch_array($cou);
-									?>								
+							<a class="col-md-4 imga" href="/congty.php?idCongTy=<?php echo $row['MaCongTy'];?>">	
+								<div class="a">						
 									<label class="tencongty">Có <b> <?php echo $cou1["soluong"]; ?></b> Công Việc</label><!-----cai nay do hien so cong viec------------>
-									
-									
-									
 									<img class="back-gr" src=" <?php echo $row["IconCongTy"];?>">
 								</div>
 							</a>
 						</form>
 						
 						<?php
+						}
 					}
 					?><br><br>
 					

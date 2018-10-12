@@ -44,7 +44,7 @@ include('header.php');
 			<div class="col-md-8 congty_chung ">
 				<div class="tencongviec_tencongty">
 					<a class="tencongviec" href="/congviec.php?idCongViec= <?php echo $row['MaCongViec']; ?>"> 
-						<h5 ><?php echo $row["TenCongViec"]; ?> </h5>
+						<h5><?php echo $row["TenCongViec"]; ?> </h5>
 					</a>
 					<a class="chitietcongviec">
 						<h6><?php echo $row['MucLuongCongViec'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->

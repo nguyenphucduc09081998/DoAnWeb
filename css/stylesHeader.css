@@ -28,3 +28,237 @@ header .search{
 .nav_menu a{
 	color: black;
 }
+/*-------------------------NganhCNTT.php---------------------------*/
+.NCNTT_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NCNTT_TatCa{
+	margin-top: 30px;
+}
+.NCNTT_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NCNTT_TungCongViec .NCNTT_TenCongViec {
+	text-decoration: none;
+}
+.NCNTT_TungCongViec .NCNTT_TenCongTy{
+	text-decoration: none;
+}
+.NCNTT_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NCNTT_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NCNTT_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NCNTT_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NCNTT_MiniTitle{
+	font-size: 40px;
+	
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NCNTT_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*-------------------------Nganh điện tử.php---------------------------*/
+.NDienTu_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+
+.NDienTu_TatCa{
+	margin-top: 30px ;
+}
+
+.NDienTu_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NDienTu_TungCongViec .NDienTu_TenCongViec {
+	text-decoration: none;
+}
+.NDienTu_TungCongViec .NDienTu_TenCongTy{
+	text-decoration: none;
+}
+.NDienTu_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NDienTu_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NDienTu_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NDienTu_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NDienTu_MiniTitle{
+	font-size: 40px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NDienTu_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*-------------------------Nganh tài chính Ngân hàng.php---------------------------*/
+.NNHTC_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+
+.NNHTC_TatCa{
+	margin-top: 30px ;
+}
+
+.NNHTC_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NNHTC_TungCongViec .NNHTC_TenCongViec {
+	text-decoration: none;
+}
+.NNHTC_TungCongViec .NNHTC_TenCongTy{
+	text-decoration: none;
+}
+.NNHTC_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NNHTC_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NNHTC_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NNHTC_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NNHTC_MiniTitle{
+	font-size: 40px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NNHTC_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*-------------------------Nganh Kinh Tế.php---------------------------*/
+.NganhKinhTe_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+
+.NganhKinhTe_TatCa{
+	margin-top: 30px ;
+}
+
+.NganhKinhTe_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NganhKinhTe_TungCongViec .NganhKinhTe_TenCongViec {
+	text-decoration: none;
+}
+.NganhKinhTe_TungCongViec .NganhKinhTe_TenCongTy{
+	text-decoration: none;
+}
+.NganhKinhTe_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NganhKinhTe_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NganhKinhTe_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NganhKinhTe_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NganhKinhTe_MiniTitle{
+	font-size: 40px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NganhKinhTe_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+
+
+

@@ -16,7 +16,7 @@ if (isset($_POST['NapHoSo'])) {
 	$SoDienThoai =  $_POST['SoDienThoai'];
 	$KinhNghiem = $_POST['KinhNghiem'];
 	$TrinhDo =  $_POST['TrinhDo'];
-	//$MaCongViec = $_POST['MaCongViec'];
+	$MaCongViec = $_POST['MaCongViec'];
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($Ten)) { array_push($errors, "chua nhap ten"); }
@@ -46,8 +46,8 @@ mysqli_set_charset($db, "utf8");
   if (count($errors) == 0) {
   	//$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO nguoixinviec (TenNguoiXinViec,  EmailNguoiXinViec, SDTNguoiXinViec, TrinhDoNguoiXinViec, KinhNghiemNguoiXinViec) 
-  			  VALUES('$Ten', '$Email', '$SoDienThoai','$TrinhDo','$KinhNghiem')";
+  	$query = "INSERT INTO nguoixinviec (TenNguoiXinViec,  EmailNguoiXinViec, SDTNguoiXinViec, TrinhDoNguoiXinViec, KinhNghiemNguoiXinViec, MaCongViec) 
+  			  VALUES('$Ten', '$Email', '$SoDienThoai','$TrinhDo','$KinhNghiem', '$MaCongViec')";
 			  
   	mysqli_query($db, $query);
   	//$_SESSION['username'] = $username;
