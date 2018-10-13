@@ -1,7 +1,5 @@
 .FDT_form_text{
     width: 424px;
-    margin-bottom: 5px;
-
 }
 
 .FDT_dang_tin{
@@ -17,19 +15,14 @@
 .FDT_ten_cv{
     margin-top:10px;
     margin-bottom: 10px;
-    width:424px;
 }
 
 .FTD_up_img{
     margin-top:10px;
 }
 
-.nhap{
-    margin-bottom: 5px;
-}
-
 .FDT_submit{
     margin-left: 550px;
     margin-bottom: 10px;
-}
 
+}

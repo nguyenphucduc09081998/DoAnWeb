@@ -3,7 +3,7 @@ session_start();
 
 // initializing variables
 
-$errors = array();
+$errors = array(); 
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'dataweb');
@@ -27,31 +27,30 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT COUNT(*) FROM user WHERE Username='$username' ";
-
+  $user_check_query = "SELECT * FROM user WHERE username='$username' ";
   $result = mysqli_query($db, $user_check_query);
-  $data= mysqli_fetch_array($result, MYSQLI_NUM);
-  var_dump($data[0]);
-  die();
-
-  if ($data[0] > 1) { // if user exists
+  $user = mysqli_fetch_assoc($result);
+  
+  if ($user) { // if user exists
+    if ($user['username'] === $username) {
       array_push($errors, "Username already exists");
+    }
   }
 
-  if(count($errors) == 0){
-      $password = md5($password_1);//encrypt the password before saving in the database
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+  	$password = md5($password_1);//encrypt the password before saving in the database
 
-      $query = "INSERT INTO user (Username,  Password) 
+  	$query = "INSERT INTO user (username,  password) 
   			  VALUES('$username', '$password')";
-
-      mysqli_query($db, $query);
-      $_SESSION['username'] = $username;
-      $_SESSION['success'] = "You are now logged in";
-
-      echo "dang ki thanh cong";
-      /*header('location: index.php');*/
+			  
+  	mysqli_query($db, $query);
+  	$_SESSION['username'] = $username;
+  	$_SESSION['success'] = "You are now logged in";
+	
+	echo "dang ki thanh cong";
+	/*header('location: index.php');*/
   }
-
 }
 // LOGIN USER
 if (isset($_POST['login_user'])) {
@@ -70,16 +69,13 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
-        session_register(username);
-        session_register(password);
-
-        $_SESSION['username'] = $_POST['username']; // store username
-        $_SESSION['password'] = $_POST['password']; // store password
+  	  $_SESSION['username'] = $username;
+  	  $_SESSION['success'] = "You are now logged in";
 			
 	  header('location: /DoAn.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
-		echo"Login khong thanh cong";
+		echo"Login ko thanh cong";
   	}
   }
 }
