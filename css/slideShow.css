@@ -4,7 +4,19 @@ body{
     margin: 0;
 }
 
+.NTD_menu{
+    border: 1px solid #8c8c8c;
+    margin-right: 10px;
+    height:50px;
+    text-align: center;
+    padding-top:10px;
+}
 
+.NTD_menu:hover{
+    background: #0b2e13;
+    color: red;
+    font-size: 17px;
+}
 /*menu dieu khien*/
 .thong-tin {
     margin-left: auto;

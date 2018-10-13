@@ -8,21 +8,27 @@
 include ('header.php');
 ?>
     <link rel="stylesheet" type="text/css" href="css/slideShow.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!------------------------menu quan ly-------------------------->
     <section class="nav_menu">
         <div class="container thong-tin">
             <div class="row">
                 <div class="col-md-2">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2 NTD_menu">
                     <a href="#" title="quản lý tin" >Quản lý tin đăng</a>
+                    <i class="fa fa-address-card"></i>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2 NTD_menu">
+                    <a href="#" title="hồ sơ" >hồ sơ ứng tuyển</a>
+                    <i class="fa fa-file-text"></i>
+                </div>
+                <div class="col-md-2 NTD_menu">
                     <a href="/formdangtin.php" title="đăng tin tuyển dụng">Đăng tin </a>
+                    <i class="glyphicon glyphicon-open-file"></i>
                 </div>
-                <div class="col-md-3">
-                    <a href="#" title="thông tin">Thông tin tài khoản</a>
+                <div class="col-md-2 NTD_menu">
+                    <a href="#" title="thông tin">Tài khoản</a>
                 </div>
                 <div class="col-md-1">
                 </div>

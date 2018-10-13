@@ -3,7 +3,7 @@ include('header.php');
 ?>
 
 <?php
- include('serverInsert_NguoiXinViec.php'); 
+ include('serverInsert_NguoiXinViec.php');
  ?>
 
 
