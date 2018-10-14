@@ -16,7 +16,7 @@ include('header.php');
 	<div class="TimViec_Part_Full">
 		<div class="col-md-5 NTD_menu">
 			<a href="/TimViecFullTime.php" title="quản lý tin" >Công Việc Full Time</a>
-            <i class="fa fa-file-text" style="font-size48px;"></i>
+            <i class="fa fa-file-text" style="font-size:48px;"></i>
 		</div>
 		<div class="col-md-5 NTD_menu">
 			<a href="/TimViecPartTime.php" title="hồ sơ" >Công Việc Part Time</a>
