@@ -1,6 +1,5 @@
 .FDT_form_text{
     width: 424px;
-    margin-bottom: 5px;
 }
 
 .FDT_dang_tin{
@@ -25,8 +24,5 @@
 .FDT_submit{
     margin-left: 550px;
     margin-bottom: 10px;
-}
 
-.combo_box{
-    height:30px;
 }

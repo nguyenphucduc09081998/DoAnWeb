@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+session_start();
 ?>
 <link rel="stylesheet" href="css/stylesDoAn.css">
 	<!-----------------------chia tung cot cong ty----------------------------------->
@@ -19,7 +20,7 @@ include('header.php');
 					while($row = mysqli_fetch_array($img))
 					{			
 						$b =  $row['MaCongTy'];
-						$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b ");
+						$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b");
 						$cou1 = mysqli_fetch_array($cou);
 						if(($cou1['soluong']) >= 1 ){
 						?>

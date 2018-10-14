@@ -1,10 +1,7 @@
 <?php
 session_start();
-
 // initializing variables
-
 $errors = array(); 
-
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'dataweb');
 
@@ -18,24 +15,26 @@ if (isset($_POST['reg_user'])) {
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
-  if (empty($username)) { array_push($errors, "Username is required"); }
+ // if (empty($username)) { array_push($errors, "Username is required"); }
 
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  
+ // if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
   }
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM user WHERE username='$username' ";
+  $user_check_query = "SELECT count(*) FROM user WHERE Username='$username' ";
   $result = mysqli_query($db, $user_check_query);
-  $user = mysqli_fetch_assoc($result);
+   
+   
   
-  if ($user) { // if user exists
-    if ($user['username'] === $username) {
+  if (!result) { // if user exists 
       array_push($errors, "Username already exists");
-    }
+	  
   }
+  
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
@@ -75,9 +74,10 @@ if (isset($_POST['login_user'])) {
 	  header('location: /DoAn.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
-		echo"Login ko thanh cong";
+		//echo"Login ko thanh cong";
   	}
   }
+  die();
 }
 
 ?>

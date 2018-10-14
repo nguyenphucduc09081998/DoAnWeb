@@ -3,8 +3,10 @@ include('header.php');
 ?>
 
 <?php
-    include('serverInsert_NguoiXinViec.php');
+ include('serverInsert_NguoiXinViec.php'); 
  ?>
+
+
 <section>
 	<div class="container">
 		<div class="row">
@@ -55,7 +57,7 @@ include('header.php');
 						<?php 
 				
 				?>
-						<td><input class="nhap" type="text" name="MaCongViec" value="<?php echo $res1['MaCongViec']; ?>" style="height:1px;width:1px; background:#ddd;" /></td>
+						<td><input class="nhap" type="text" name="MaCongViec" value="<?php echo $res1['MaCongViec']; ?>" style="height:1px;width:1px; background:#ddd;"  /></td>
 						
 					</tr>
 					
