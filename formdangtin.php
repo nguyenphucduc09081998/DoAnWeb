@@ -8,12 +8,13 @@
     include ('header.php');
 ?>
 <?php
-include('severInsert_FormDangTin.php');
-?> 
+include('serverInsert_FormDangTin.php');
+?>
+
     <!-------------------------------form dang tin------------------------------------------>
     <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
     <div class="container">
-        <form class="FDT_dang_tin" method ="post">
+        <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangTin.php">
               <table class="FDT_table">
                   <tr>
                       <th>
@@ -107,10 +108,9 @@ include('severInsert_FormDangTin.php');
                       </th>
                   </tr>
               </table>
+            <input class="submit FDT_submit" type="submit" value="upload" name="Upload"/>
         </form>
-        <form class="FDT_submit" action="#" method="post" enctype="multipart/form-data">
-            <input class="submit" type="submit" value="upload" />
-        </form>
+
 
     </div>
 <!-----------------------------------------------xu ly thong tin nhap vao------------------------------------------------->

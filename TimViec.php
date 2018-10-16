@@ -24,15 +24,6 @@ include('header.php');
 		</div>
 		
 	</div>
-	
-	
-
-	
-	
-	
-	
-	
-	
 	<h2 class="TimViec_title" ><?php echo $row['sf'];?> Công Việc Chất cho bạn</h2>
 			<?php		
 				while($result = mysqli_fetch_array($jobs)){
@@ -42,8 +33,7 @@ include('header.php');
 						<div class="TimViec_logo">
 							<a href="/congty.php?idCongTy=<?php echo $result['MaCongTy'];?>">
 								<img class="TimViec_iconcongty" src="<?php echo $result['IconCongTy'];?>" >
-							</a>
-									
+							</a>								
 							<a class="TimViec_tencongviec" href="/congviec.php?idCongViec= <?php echo $result['MaCongViec']; ?>" > 
 								<h5><?php echo $result["TenCongViec"]; ?> </h5>
 							</a>
@@ -62,8 +52,6 @@ include('header.php');
 				<?php	
 				}
 				?>
-			
-			
 		</div>
 	</div>
 

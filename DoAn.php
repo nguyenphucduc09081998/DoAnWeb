@@ -1,6 +1,7 @@
 <?php
 include('header.php');
 session_start();
+//include('serverLogin_Register.php');
 ?>
 <link rel="stylesheet" href="css/stylesDoAn.css">
 	<!-----------------------chia tung cot cong ty----------------------------------->

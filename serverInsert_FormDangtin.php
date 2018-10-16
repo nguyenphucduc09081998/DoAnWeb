@@ -6,8 +6,7 @@
  * Time: 10:31 AM
  */
 
-include('serverLongin_Register.php');
-
+//include('serverLogin_Register.php');
 session_start();
 
 // initializing variables
@@ -18,15 +17,16 @@ $errors = array();
 $db = mysqli_connect('localhost', 'root', '', 'dataweb');
 
 // REGISTER USER
-if (isset($_POST['NapHoSo'])) {
+if (isset($_POST['Upload'])) {
     // receive all input values from the form
     $TenCV =  $_POST['ten_cv'];
     $MoTa = $_POST['FDT_mo_ta'];
     $YeuCau =  $_POST['FDT_yeu_cau'];
     $MucLuong = $_POST['muc_luong'];
-    $TinhChat =  $_POST['TC'];
-    $LinhVuc = $_POST['linh_vuc'];
-    $SoLuong = $_POS['SL'];
+    $TinhChat = (int)$_POST['TC'];
+    $LinhVuc = (int)$_POST['linh_vuc'];
+    $SoLuong = (int)$_POST['SL'];
+
 
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
@@ -42,13 +42,13 @@ if (isset($_POST['NapHoSo'])) {
     mysqli_set_charset($db, "utf8");
     // Finally, register user if there are no errors in the form
     //get the id congty
-
+    $MaCongTy = 1;
 
     if (count($errors) == 0) {
         //$password = md5($password_1);//encrypt the password before saving in the database
 
         $query = "INSERT INTO congviec (TenCongViec, MoTaCongViec, MucLuongCongViec, YeuCauCongViec, TinhChatCongViec, SoLuongCongViec, NganhCongViec, MaCongty) 
-  			  VALUES('$TenCV', '$Mota', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$linhVuc','$MaCongTy')";
+  			  VALUES('$TenCV', '$Mota', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','$MaCongTy')";
 
         mysqli_query($db, $query);
         //$_SESSION['username'] = $username;
