@@ -22,8 +22,9 @@
 	crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>--->
 	
-	
-	
+<script>
+	 document.getElementById("change").style.text = "sfa";
+</script>
 </head>
 <body>
 	<!---------------------nav----------------------------->
@@ -41,11 +42,17 @@
 					<a rel="nofollow" href="/NhaTuyenDung.php" title="Trang tuyển dụng"><img src="images/admin.png" height="25" width="25" />Tuyển Dụng</a><!--rel="nofollow" là gì-->
 				</div>
 				<div class="col-md-2">
-					<!---<a data-toggle="modal" href="#myModal" ><img src="images/password.png" height="25" width="25" />Đăng Nhập</a>-->
-					<a id="dangnhap" href="/login.php" <!--target="targetframe"--> <img src="images/password.png" height="25" width="25" />Đăng Nhập</a>
+					<a id="dangnhap" href="/login.php" <!--target="targetframe"-->  <img src="images/password.png" height="25" width="25" /> Đăng Nhập</a>				
+				<!------>
+			<?php
+		
+		?>
+
+				
+				<!------------->
 				</div>
 				<div class="col-md-2">
-					<a id="dangki" href="/register.php" <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25"/>Đăng Xuất </a>	
+					<a id="dangki" href="#"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Xuất </a>	
 				</div>	
 			</div>
 		</div>
@@ -57,12 +64,14 @@
 			<div class="row">
 				<div class="col-md-2">
 				</div>	
-				<div class="col-md-6">
-					 <input type="text" class="form-control" placeholder="search...">
-				</div>
-				<div class="col-md-2">
-					<button type="button" class="btn btn-info">Search</button>
-				</div>
+				<form action="/search_congviec.php" method="post">	
+					<div class="col-md-6">
+						 <input type="text" name="txtsearch" class="form-control" placeholder="search...">
+					</div>
+					<div class="col-md-2">
+						<button type="submit" class="btn btn-info" name="btn_search">Search</button>
+					</div>
+				</form>
 				<div class="col-md-2">
 				</div>
 			</div>
@@ -76,17 +85,17 @@
 			
 				<div class="col-md-2">
 				</div>
-				<div class="col-md-2">
-					<a href="/NganhCNTT.php" title="Ngành IT" >Công Nghệ Thông Tin</a>
+				<div class="col-md-2 ">
+					<a href="/NganhCNTT.php" title="Ngành IT" style="font-family: 'Great Vibes', cursive;font-size:15px;">Công Nghệ Thông Tin</a>
 				</div>
 				<div class="col-md-2">
-					<a href="/NganhDienTu.php" title="Ngành DTKT">Điện Tử - Kĩ Thuật</a>
+					<a href="/NganhDienTu.php" title="Ngành DTKT" style="font-family: 'Great Vibes', cursive;font-size:15px;">Điện Tử - Kĩ Thuật</a>
 				</div>
 				<div class="col-md-2">
-					<a href="/NganhNganHTaiC.php" title="Ngành NHTC">Ngân Hàng - Tài Chính</a>
+					<a href="/NganhNganHTaiC.php" title="Ngành NHTC" style="font-family: 'Great Vibes', cursive;font-size:15px;">Ngân Hàng - Tài Chính</a>
 				</div>
 				<div class="col-md-2">
-					<a href="/NganhKinhTe.php" title="Ngành KT">Kinh Tế </a>
+					<a href="/NganhKinhTe.php" title="Ngành KT" style="font-family: 'Great Vibes', cursive;font-size:15px;">Kinh Tế </a>
 				</div>
 				<div class="col-md-2">
 				</div>

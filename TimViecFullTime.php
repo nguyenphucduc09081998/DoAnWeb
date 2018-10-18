@@ -5,24 +5,24 @@ include('header.php');
 		<div class="row">
 	<?php
 		$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
-		$img = mysqli_query($db,"select count(*) as sf from congviec");
+		$img = mysqli_query($db,"select count(MaCongViec) as sf from congviec where TinhChatCongViec=1");
 		$row = mysqli_fetch_array($img);
 		mysqli_set_charset($db, "utf8");		
 		$jobs = mysqli_query($db,"select congviec.MaCongViec, congty.IconCongTy, congviec.MaCongTy, congviec.TenCongViec, congviec.MoTaCongViec, 
 		congviec.YeuCauCongViec, congviec.SoLuongCongViec, congty.DiaChiCongTy, congviec.MucLuongCongViec from congty,congviec where congty.MaCongTy = congviec.MaCongTy && congviec.TinhChatCongViec=1");					
 	//$shpwjobs = mysqli_query($db,"select * from congty");
 	?>
-	<div class="TimViec_Part_Full">
-		<div class="col-md-5 NTD_menu">
-			<a href="/TimViecFullTime.php" title="quản lý tin" >Công Việc Full Time</a>
-            <i class="fa fa-file-text" style="font-size48px;"></i>
-		</div>
-		<div class="col-md-5 NTD_menu">
-			<a href="/TimViecPartTime.php" title="hồ sơ" >Công Việc Part Time</a>
-            <i class="fa fa-address-card-o"></i>
-		</div>
-		
-	</div>
+	<div class="col-md-2">
+				</div>
+				<div class="col-md-4 NguoiTimViec">
+					<a href="/TimViecFullTime.php"  >Công Việc Full Time</a>
+				</div>
+				<div class="col-md-4 NguoiTimViec">
+					<a href="/TimViecPartTime.php" title="hồ sơ" >Công Việc Part Time</a>
+				
+				</div>
+				<div class="col-md-2">
+				</div>
 	<h2 class="TimViec_title" ><?php echo $row['sf'];?> Công Việc Full Chất Lượng cho bạn</h2>
 			<?php		
 				while($result = mysqli_fetch_array($jobs)){

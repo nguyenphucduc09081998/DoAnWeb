@@ -26,7 +26,10 @@ if (isset($_POST['Upload'])) {
     $TinhChat = (int)$_POST['TC'];
     $LinhVuc = (int)$_POST['linh_vuc'];
     $SoLuong = (int)$_POST['SL'];
+	//update image
 
+	$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
+      //$query = "INSERT INTO image(nameimage) VALUES ('$file')";  
 
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
@@ -47,8 +50,8 @@ if (isset($_POST['Upload'])) {
     if (count($errors) == 0) {
         //$password = md5($password_1);//encrypt the password before saving in the database
 
-        $query = "INSERT INTO congviec (TenCongViec, MoTaCongViec, MucLuongCongViec, YeuCauCongViec, TinhChatCongViec, SoLuongCongViec, NganhCongViec, MaCongty) 
-  			  VALUES('$TenCV', '$Mota', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','$MaCongTy')";
+        $query = "INSERT INTO congviec (TenCongViec, MoTaCongViec, MucLuongCongViec, YeuCauCongViec, TinhChatCongViec, SoLuongCongViec, NganhCongViec, MaCongty,AnhCongViec) 
+  			  VALUES('$TenCV', '$Mota', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','$MaCongTy','$file')";
 
         mysqli_query($db, $query);
         //$_SESSION['username'] = $username;

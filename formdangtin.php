@@ -12,9 +12,9 @@ include('serverInsert_FormDangTin.php');
 ?>
 
     <!-------------------------------form dang tin------------------------------------------>
-    <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css" >
     <div class="container">
-        <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangTin.php">
+        <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangTin.php" enctype = "multipart / form-data">
               <table class="FDT_table">
                   <tr>
                       <th>
@@ -99,12 +99,20 @@ include('serverInsert_FormDangTin.php');
                           </select>
                       </td>
                   </tr>
+				  <tr>
+					<th>
+                          Ma Công Ty:
+                      </th>
+					  <th>
+                          <input class="text FDT_form_text" type ="text" name="SL" required/>
+                      </th>
+				  </tr>
                   <tr>
                       <th>
                           ảnh:
                       </th>
                       <th>
-                          <input class="FTD_up_img" type="file"/>
+                          <input class="FTD_up_img" type="file" name="image" id="image"/>
                       </th>
                   </tr>
               </table>

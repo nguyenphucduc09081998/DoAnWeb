@@ -27,7 +27,10 @@ header .search{
 }
 .nav_menu a{
 	color: black;
+	text-decoration:none;
 }
+
+
 /*-------------------------NganhCNTT.php---------------------------*/
 .NCNTT_title{
 	font-size: 50px;
@@ -260,22 +263,26 @@ header .search{
 	width: 250px;
 }
 /*----------------------------gape Tim Viec-------------------------------*/
-.NTD_menu:hover{
-    font-size:20px;
-    text-decoration: none;
-    color:red;
-}
-.NTD_menu{
-    border : 1px solid black;
-    background:green;
-    height: 80px;
-    margin-right:25px;
-    padding-left:0;
-    padding-right: 0;
-    padding-top: 15px;
-    text-align: center;
+.NguoiTimViec{
+		text-decoration: none;
+	font-family: 'Charmonman', cursive;
+	margin-top: 20px;
+	text-align:center;
+	font-size:30px;
+	}
+.NguoiTimViec a{
 
+	color:#95e6d9;
+	
 }
+.NguoiTimViec a:hover{
+	font-size: 31px;
+	
+	
+}
+
+
+
 .TimViec_title{
 		padding-top: 70px;
 	color:black;

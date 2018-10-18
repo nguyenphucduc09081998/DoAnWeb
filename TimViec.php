@@ -13,17 +13,19 @@ include('header.php');
 		congviec.YeuCauCongViec, congviec.SoLuongCongViec, congty.DiaChiCongTy, congviec.MucLuongCongViec, congviec.TinhChatCongViec from congty,congviec where congty.MaCongTy = congviec.MaCongTy");					
 	//$shpwjobs = mysqli_query($db,"select * from congty");
 	?>
-	<div class="TimViec_Part_Full">
-		<div class="col-md-5 NTD_menu">
-			<a href="/TimViecFullTime.php" title="quản lý tin" >Công Việc Full Time</a>
-            <i class="fa fa-file-text" style="font-size:48px;"></i>
-		</div>
-		<div class="col-md-5 NTD_menu">
-			<a href="/TimViecPartTime.php" title="hồ sơ" >Công Việc Part Time</a>
-            <i class="fa fa-address-card-o"></i>
-		</div>
-		
-	</div>
+
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-4 NguoiTimViec">
+					<a href="/TimViecFullTime.php"  >Công Việc Full Time</a>
+				</div>
+				<div class="col-md-4 NguoiTimViec">
+					<a href="/TimViecPartTime.php" title="hồ sơ" >Công Việc Part Time</a>
+				
+				</div>
+				<div class="col-md-2">
+				</div>
+	
 	<h2 class="TimViec_title" ><?php echo $row['sf'];?> Công Việc Chất cho bạn</h2>
 			<?php		
 				while($result = mysqli_fetch_array($jobs)){
