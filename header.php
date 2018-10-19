@@ -42,7 +42,7 @@
 					<a rel="nofollow" href="/NhaTuyenDung.php" title="Trang tuyển dụng"><img src="images/admin.png" height="25" width="25" />Tuyển Dụng</a><!--rel="nofollow" là gì-->
 				</div>
 				<div class="col-md-2">
-					<a id="dangnhap" href="/login.php" <!--target="targetframe"-->  <img src="images/password.png" height="25" width="25" /> Đăng Nhập</a>				
+					<a id="dangnhap" href="/login.php" ><!--target="targetframe"-->  <img src="images/password.png" height="25" width="25" /> Đăng Nhập</a>				
 				<!------>
 			<?php
 		

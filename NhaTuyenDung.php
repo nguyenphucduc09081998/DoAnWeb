@@ -28,7 +28,7 @@ include ('header.php');
                     <i class="fa fa-plus-square"></i>
                 </div>
                 <div class="col-md-2 NTD_menu">
-                    <a href="#" title="thông tin">Thông tin tài khoản</a>
+                    <a href="QLHoSo.php" title="thông tin">Thông tin tài khoản</a>
                     <i class="	fa fa-key"></i>
                 </div>
                 <div class="col-md-1">

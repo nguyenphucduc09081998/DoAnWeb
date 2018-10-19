@@ -2,9 +2,6 @@
 session_start();
 include('header.php');
 
-//session_start();
-//include('serverLogin_Register.php');
-//echo $_SESSION['abc'];
 ?>
 
 
@@ -68,17 +65,3 @@ include('header.php');
 include('footer.php');
 ?>
 <!--------------------------------javascript--------------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
-
-

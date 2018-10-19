@@ -25,13 +25,13 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM user WHERE username='$username' LIMIT 1 ";
+  $user_check_query = "SELECT * FROM user WHERE Username='$username' LIMIT 1 ";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
    
 
    if ($user) { // if user exists
-    if ($user['username'] === $username) {
+    if ($user['Username'] === $username) {
       array_push($errors, "Username đã tồn tại");
     }
    }
@@ -40,7 +40,7 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO user (username,  password) 
+  	$query = "INSERT INTO user (Username,  Password) 
   			  VALUES('$username', '$password')";
 			  
   	mysqli_query($db, $query);
@@ -67,14 +67,14 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	$password = md5($password);
-  	$query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+  	$query = "SELECT * FROM user WHERE Username='$username' AND Password='$password'";
   	$results = mysqli_query($db, $query);
 	$row =mysqli_fetch_array($results);
   	if (mysqli_num_rows($results) == 1) {
   	  //$_SESSION['username'] = $username;
 	  
 	  //
-	   $_SESSION['abc'] = $username;
+	   $_SESSION['username'] = $username;
 	  
 	  //
   	  //$_SESSION['success'] = "You are now logged in";

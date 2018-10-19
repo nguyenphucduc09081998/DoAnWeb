@@ -6,31 +6,25 @@
  * Time: 10:31 AM
  */
 
-//include('serverLogin_Register.php');
-session_start();
 
-// initializing variables
 
-$errors = array();
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'dataweb');
-
+	$db = mysqli_connect('localhost', 'root', '', 'dataweb');
+	mysqli_set_charset($db, "utf8");
 // REGISTER USER
-if (isset($_POST['Upload'])) {
-    // receive all input values from the form
-    $TenCV =  $_POST['ten_cv'];
+
+if (isset($_POST['updatecongviec'])) {
+	$TenCV =  $_POST['ten_cv'];
+
     $MoTa = $_POST['FDT_mo_ta'];
     $YeuCau =  $_POST['FDT_yeu_cau'];
     $MucLuong = $_POST['muc_luong'];
     $TinhChat = (int)$_POST['TC'];
     $LinhVuc = (int)$_POST['linh_vuc'];
     $SoLuong = (int)$_POST['SL'];
-	//update image
 
-	$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
-      //$query = "INSERT INTO image(nameimage) VALUES ('$file')";  
-
+  
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($TenCV)) { array_push($errors, "chưa có tên công việc"); }
@@ -42,17 +36,19 @@ if (isset($_POST['Upload'])) {
 
     // first check the database to make sure
 
-    mysqli_set_charset($db, "utf8");
-    // Finally, register user if there are no errors in the form
-    //get the id congty
-    $MaCongTy = 1;
+   
+   
 
     if (count($errors) == 0) {
+		
+	//move_uploaded_file($filetmpname, $folder.$filename);
+ 
+		
         //$password = md5($password_1);//encrypt the password before saving in the database
-
-        $query = "INSERT INTO congviec (TenCongViec, MoTaCongViec, MucLuongCongViec, YeuCauCongViec, TinhChatCongViec, SoLuongCongViec, NganhCongViec, MaCongty,AnhCongViec) 
-  			  VALUES('$TenCV', '$Mota', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','$MaCongTy','$file')";
-
+ 
+        $query = "INSERT INTO `congviec` (`TenCongViec`, `MoTaCongViec`, `MucLuongCongViec`, `YeuCauCongViec`, `TinhChatCongViec`, `SoLuongCongViec`, `NganhCongViec`) 
+  			  VALUES('$TenCV', '$MoTa', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc')";
+	
         mysqli_query($db, $query);
         //$_SESSION['username'] = $username;
         //$_SESSION['success'] = "You are now logged in";
@@ -68,7 +64,9 @@ if (isset($_POST['Upload'])) {
         sleep(3);
         header('location: /DoAn.php');
 
-    }
+    }else{
+		echo 'ko dk';
+	}
 }
 
 ?>
