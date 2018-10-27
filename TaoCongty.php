@@ -7,24 +7,39 @@
  */
 
     include ('header.php');
+<<<<<<< HEAD
     include ('serverInsert_CongTy.php');
+=======
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 ?>
 <link rel="stylesheet" href="css/stylesTaoCongTy.css">
 <div class="container">
     <div class="form_dangki">
+<<<<<<< HEAD
         <form class="TCT_dang_tin" method ="post" action="serverInsert_CongTy.php">
+=======
+        <div class="TCT_dang_tin" method ="post" action="serverInsert_CongTy.php">
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
             <h3 class="TCT_title">Thông tin tài khoản</h3>
             <table>
                 <tr>
                     <th>Tên tài khoản:</th>
                     <td>
+<<<<<<< HEAD
                         <input class="text TCT_form_text" type="text" name="ten_tk"/>
+=======
+                        <input class="text TCT_form_text" type="text" name="ten_tk" required/>
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
                     </td>
                 </tr>
                 <tr>
                     <th>Mật khẩu: </th>
                     <td>
+<<<<<<< HEAD
                         <input class="text TCT_form_text" type="text" name="matkhau"/>
+=======
+                        <input class="text TCT_form_text" type="text" name="matkhau" required/>
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
                     </td>
                 </tr>
             </table>
@@ -105,9 +120,16 @@
             </table><!--đãi ngô công ty-->
 
             <div class="TCT_submit">
+<<<<<<< HEAD
                 <input class="submit" type="submit" value="Tạo hồ sơ" name="Upload"/>
             </div>
         </form>
+=======
+                <input class="submit" type="submit" value="upload" name="Upload"/>
+            </div>
+        </div>
+    </form>
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
     </div>
 </div>
 

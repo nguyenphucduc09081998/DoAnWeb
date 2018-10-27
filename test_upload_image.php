@@ -1,11 +1,9 @@
 <?php
-session_start();
 include('header.php');
-<<<<<<< HEAD
 session_start();
-=======
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
-
+//session_start();
+//include('serverLogin_Register.php');
+//echo $_SESSION['abc'];
 ?>
 
 
@@ -20,29 +18,34 @@ session_start();
 
 					$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 					//mysqli_select_db("datawed");
-					$img = mysqli_query($db,"select * from congty");
+					$img = mysqli_query($db,"select * from testimage");
 					
 					
 					
 					while($row = mysqli_fetch_array($img))
 					{			
-						$b =  $row['MaCongTy'];
-						$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b");
-						$cou1 = mysqli_fetch_array($cou);
-						if(($cou1['soluong']) >= 1 ){
+						
 						?>
-						<form  method="get" action="congty.php">
-							<a class="col-md-4 imga" href="/congty.php?idCongTy=<?php echo $row['MaCongTy'];?>">	
+						<form  method="get" action="">
+							<a class="col-md-4 imga" href="">	
 								<div class="a">						
-									<label class="tencongty">Có <b> <?php echo $cou1["soluong"]; ?></b> Công Việc</label><!-----cai nay do hien so cong viec------------>
-									<img class="back-gr" src=" <?php echo $row["IconCongTy"];?>">
+									<label class="tencongty">Có <b></b> Công Việc</label><!-----cai nay do hien so cong viec------------>
+									<h2><?php echo $row['id'];?></h2>
+									<div class="back-gr">
+									<?php
+                     
+					 
+					 echo '
+                          <img src="data:image/jpeg;base64,'.base64_encode($row['nameimage'] ).'" height="300px" width="100%" class="img-thumnail" />  
+                    ';  
+					?></div>
 								</div>
 							</a>
 						</form>
 						
 						<?php
 						}
-					}
+					
 					?><br><br>
 					
 			</div>
@@ -69,3 +72,17 @@ session_start();
 include('footer.php');
 ?>
 <!--------------------------------javascript--------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

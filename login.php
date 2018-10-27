@@ -18,10 +18,10 @@
 						<h1>Đăng Nhập</h1>
 						
 						<label><h3>Username</h3></label><br>
-						<input type="text" placeholder="Username" name="username"><br>
+						<input type="text" placeholder="Username" name="username" required><br>
 						
 						<label><h3>Password</h3></label><br>
-						<input type="password" placeholder="Password" name="password" ><br><br>
+						<input type="password" placeholder="Password" name="password" required ><br><br>
 						
 						<!--<label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>--->
 						<button type="submit" class="btn" name="login_user" ><h3>Login</h3></button><br><br>

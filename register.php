@@ -19,13 +19,13 @@
 						<h2>Register</h2>
 						
 						<label>Username</label><br>
-						<input type="text" name="username" placeholder="Username"><br>
+						<input type="text" name="username" placeholder="Username" required><br>
 						
 						<label>Password</label><br>
-						<input type="password" name="password_1" placeholder="Password"><br>
+						<input type="password" name="password_1" placeholder="Password" required><br>
 						
 						<label>Confirm password</label><br>
-						<input type="password" name="password_2" placeholder="Confirm Password"><br>
+						<input type="password" name="password_2" placeholder="Confirm Password" required><br>
 						
 						 <button type="submit" class="btn" name="reg_user">Register</button><br>
 						<p>Already a member? <a href="/login.php">Sign in</a></p> <br>

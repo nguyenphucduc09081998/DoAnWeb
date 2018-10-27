@@ -6,7 +6,11 @@
  * Time: 1:25 PM
  */
 include('header.php');
+<<<<<<< HEAD
 session_start();
+=======
+
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 $db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 mysqli_set_charset($db, "utf8");
 ?>
@@ -20,9 +24,13 @@ mysqli_set_charset($db, "utf8");
     $MaUser = (int)$arrUser['MaUser'];
     $cty = mysqli_query($db,"select * from congty where IDuser = $MaUser");
     $result = mysqli_fetch_array($cty);
+<<<<<<< HEAD
    if(($result) == null){
        header('location:TaoCongTy.php');
    }
+=======
+
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 
 
 ?>

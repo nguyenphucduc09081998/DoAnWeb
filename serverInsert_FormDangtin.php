@@ -6,7 +6,11 @@
  * Time: 10:31 AM
  */
 
+<<<<<<< HEAD
 session_start();
+=======
+
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 
 
 // connect to the database
@@ -14,6 +18,7 @@ session_start();
 	mysqli_set_charset($db, "utf8");
 // REGISTER USER
 
+<<<<<<< HEAD
 $user = $_SESSION['username'];
 
 //lay thong tin user
@@ -30,12 +35,18 @@ if(($result) == null){
 
 if (isset($_POST['Upload'])) {
 	$TenCV =  $_POST['ten_cv'];
+=======
+if (isset($_POST['updatecongviec'])) {
+	$TenCV =  $_POST['ten_cv'];
+
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
     $MoTa = $_POST['FDT_mo_ta'];
     $YeuCau =  $_POST['FDT_yeu_cau'];
     $MucLuong = $_POST['muc_luong'];
     $TinhChat = (int)$_POST['TC'];
     $LinhVuc = (int)$_POST['linh_vuc'];
     $SoLuong = (int)$_POST['SL'];
+<<<<<<< HEAD
 //get nameimage
 	$filename = $_FILES['nameimage']['name'];
 	$filetmpname = $_FILES['nameimage']['tmp_name'];
@@ -43,6 +54,10 @@ if (isset($_POST['Upload'])) {
 
     $MaCongTy = (int)$result['MaCongTy'];
 
+=======
+
+  
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($TenCV)) { array_push($errors, "chưa có tên công việc"); }
@@ -54,6 +69,7 @@ if (isset($_POST['Upload'])) {
 
     // first check the database to make sure
 
+<<<<<<< HEAD
     if (count($errors) == 0) {
 		
 	
@@ -64,6 +80,20 @@ if (isset($_POST['Upload'])) {
         $query = "INSERT INTO congviec (TenCongViec, MoTaCongViec, MucLuongCongViec, YeuCauCongViec, TinhChatCongViec, SoLuongCongViec, NganhCongViec,AnhCongViec,MaCongTy) 
   			  VALUES('$TenCV', '$MoTa', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','/images/$filename',' $MaCongTy')";
 
+=======
+   
+   
+
+    if (count($errors) == 0) {
+		
+	//move_uploaded_file($filetmpname, $folder.$filename);
+ 
+		
+        //$password = md5($password_1);//encrypt the password before saving in the database
+ 
+        $query = "INSERT INTO `congviec` (`TenCongViec`, `MoTaCongViec`, `MucLuongCongViec`, `YeuCauCongViec`, `TinhChatCongViec`, `SoLuongCongViec`, `NganhCongViec`) 
+  			  VALUES('$TenCV', '$MoTa', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc')";
+>>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 	
         mysqli_query($db, $query);
         //$_SESSION['username'] = $username;

@@ -17,7 +17,6 @@ function currentSlide(n) {
 }
 
 function showSlide(n){
-
     var i;
 
     var slides = document.getElementsByClassName("myslides");

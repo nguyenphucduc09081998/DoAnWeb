@@ -16,29 +16,6 @@ body{
     width: 800px;
     position: relative;
     margin: auto;
-    margin-top: 20px;
-}
-
-.NTD_menu:hover{
-    font-size:20px;
-    text-decoration: none;
-    color:red;
-}
-
-.NTD_menu{
-    border : 1px solid black;
-<<<<<<< HEAD
-    background:#9fcdff;
-=======
-    background:green;
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
-    height: 80px;
-    margin-right:25px;
-    padding-left:0;
-    padding-right: 0;
-    padding-top: 15px;
-    text-align: center;
-
 }
 
 .slide_show{width: 800px;}
