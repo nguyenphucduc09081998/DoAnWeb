@@ -3,14 +3,12 @@ include('header.php');
 ?>
 
 <?php
- include('serverInsert_NguoiXinViec.php'); 
+    include('serverInsert_NguoiXinViec.php');
  ?>
-
-
 <section>
 	<div class="container">
 		<div class="row">
-			<form method="post" action="formNguoiXinViec.php" >
+			<form method="post" action="formNguoiXinViec.php" enctype="multipart/form-data">
 								
 				<table class="fNXV_table" >
 				<?php include('errors.php'); ?>

@@ -13,7 +13,7 @@
 				<div class="col-md-3">
 				</div>
 				<div class="col-md-6">
-					<form  method="post" action="register.php" class="form_register">
+					<form  method="post" action="serverLogin_Register.php" class="form_register">
 						<?php include('errors.php'); ?><!----de bao ------>
 						<br><br>
 						<h2>Register</h2>

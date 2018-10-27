@@ -12,13 +12,13 @@ include('header.php');
 					mysqli_set_charset($db, "utf8");
 			$a = $_GET['idCongTy'];
 		//2 dong nay de ay du lieu don gian
-			$res =  mysqli_query($db,"SELECT  * FROM congty WHERE  MaCongTy = $a");
+			$res =  mysqli_query($db,"SELECT * FROM congty WHERE  MaCongTy = $a");
 			$res1 = mysqli_fetch_array($res);
-			
+
 			$result = mysqli_query($db,"SELECT DISTINCT TenCongViec,MaCongViec,MucLuongCongViec,YeuCauCongViec FROM congviec WHERE  MaCongTy = $a ");	
 			?>
 			<img class="Anhheadder" alt="Profile" src="<?php echo $res1['AnhCongTy'];?>" >
-			
+
 			<div class="header_CongTy">
 				<div class="col-md-4">
 					<img class="Profile" alt="Profile" src="<?php echo $res1['IconCongTy'];?>" >

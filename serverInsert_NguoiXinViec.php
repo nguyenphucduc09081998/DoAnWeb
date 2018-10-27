@@ -17,6 +17,7 @@ if (isset($_POST['NapHoSo'])) {
 	$KinhNghiem = $_POST['KinhNghiem'];
 	$TrinhDo =  $_POST['TrinhDo'];
 	$MaCongViec = $_POST['MaCongViec'];
+
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($Ten)) { array_push($errors, "chua nhap ten"); }

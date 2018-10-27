@@ -1,0 +1,29 @@
+.TCT_form_text{
+    width: 600px;
+    margin-bottom: 5px;
+}
+.TCT_title{
+    border-left: 3px solid #63248a;
+    padding-left: 10px;
+}
+
+.TCT_up_img{
+    margin-top: 15px;
+}
+
+.TCT_submit{
+    width:60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+.form_dangki{
+    margin-top: 20px;
+    background-color: #e9ecef;
+
+    padding:15px;
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}

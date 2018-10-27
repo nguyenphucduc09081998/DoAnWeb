@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+    color: #692095;
+}
+
+.QLHS_img{
+    position: relative;
+
+}
+.edit_AnhCongty{
+    position: absolute;
+    color: red;
+}
+.QLHS_header{
+   padding-left: 10px;
+
+    border-left: 3px solid #692095;
+    text-decoration: black;
+}
+.QLHS_table{
+    margin:auto;
+    border:1px solid red;
+    background: #ddd;
+    width: 500px;
+    text-align:center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.QLHS_submit{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.submit{
+    height: 50px;
+    width: 150px;
+    margin-top: 10px;
+}
+.QLHS_AnhCongTy{
+    width: 100%;
+}
+.QLHS_TenCty{
+    width:370px;
+    margin-bottom:10px;
+    margin-top:10px;
+}

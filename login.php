@@ -25,13 +25,9 @@
 						
 						<!--<label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>--->
 						<button type="submit" class="btn" name="login_user" ><h3>Login</h3></button><br><br>
-						
-						
 						<div class="col-md-6">
-						
 							<span class="psw"><a href="/register.php"><h4>Register</h4></a></span>
-						</div>	
-					
+						</div>
 					</form>
 				</div>
 				<div class="col-md-3">

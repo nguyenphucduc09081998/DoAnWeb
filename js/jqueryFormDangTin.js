@@ -3,7 +3,3 @@
          $(this).next().removeAttr('disabled');
      }).next().attr('disable', 'disable');
  });*/
-
- $(".submit").click(function() {
-    alert("fuck you");
-});
