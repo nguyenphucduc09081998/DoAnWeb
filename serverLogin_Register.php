@@ -50,11 +50,11 @@ if (isset($_POST['reg_user'])) {
 	?>
 		<h2></h2>
 	<?php
-<<<<<<< HEAD
+
 	header('location: login.php');
-=======
+
 	/*header('location: index.php');*/
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
+
   }
 }
 // LOGIN USER
