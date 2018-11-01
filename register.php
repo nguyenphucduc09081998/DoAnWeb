@@ -14,7 +14,7 @@
 				</div>
 				<div class="col-md-6">
 					<form  method="post" action="serverLogin_Register.php" class="form_register">
-						<?php include('errors.php'); ?><!----de bao ------>
+						<?php include('errors.php'); ?>
 						<br><br>
 						<h2>Register</h2>
 						

@@ -51,7 +51,7 @@ if (isset($_POST['reg_user'])) {
 		<h2></h2>
 	<?php
 
-	header('location: login.php');
+	header('location: /login.php');
 
 	/*header('location: index.php');*/
 
