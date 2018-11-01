@@ -52,7 +52,7 @@
 				<!------------->
 				</div>
 				<div class="col-md-2">
-					<a id="dangki" href="#"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Xuất </a>	
+					<a id="dangki" href="/Logout.php"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Xuất </a>	
 				</div>	
 			</div>
 		</div>
@@ -64,8 +64,11 @@
 			<div class="row">
 				<div class="col-md-2">
 				</div>	
-				<form action="/search_congviec.php" method="post">	
-					<div class="col-md-6">
+				<form action="/search_congviec.php" method="post">
+					<div class="col-md-2">
+						<p style="margin-top:0px;font-size: 20px;font-family: 'Poor Story', cursive;">Tên Công Việc:</p>
+					</div>				
+					<div class="col-md-4">
 						 <input type="text" name="txtsearch" class="form-control" placeholder="search...">
 					</div>
 					<div class="col-md-2">

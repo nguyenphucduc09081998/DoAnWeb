@@ -1,10 +1,6 @@
 <?php
 session_start();
 include('header.php');
-<<<<<<< HEAD
-session_start();
-=======
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 
 ?>
 
