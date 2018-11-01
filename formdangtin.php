@@ -5,36 +5,35 @@
  * Date: 10/9/2018
  * Time: 6:56 PM
  */
+    session_start();
     include ('header.php');
-    include ('serverInsert_FormDangtin.php');
-?>
-<<<<<<< HEAD
-
-=======
-<?php
-include('serverInsert_FormDangTin.php');
-?>
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
-
-    <!-------------------------------form dang tin------------------------------------------>
-    <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
+    if(!isset($SESSION['username'])){
+    ?>
+        <div class="container ">
+			<h2 style="font-family: 'Poor Story', cursive; color:red; text-align: center;">Bạn Cần Đăng Nhập </h2>
+			<a href="/login.php">Đăng Nhập</a>
+		</div>
+		<?php
+    }else{
+        include ('serverInsert_FormDangtin.php');
+        ?>
+         <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
     <div class="container">
-<<<<<<< HEAD
+
         <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangtin.php" enctype="multipart/form-data" >
-=======
+
         <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangTin.php">
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
+
               <table class="FDT_table">
                   <tr>
                       <th>
                           Tên công việc:
                       </th>
                       <th>
-<<<<<<< HEAD
                           <input class="text FDT_form_text" type="text" name="ten_cv" required />
-=======
+
                           <input class="text FDT_form_text" type="text" name="ten_cv" required/>
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
+
                       </th>
                       <th>
                           <span class ="FDT_feedback"></span>
@@ -68,11 +67,10 @@ include('serverInsert_FormDangTin.php');
                           Mức lương:
                       </th>
                       <th>
-<<<<<<< HEAD
+
                           <input class="text FDT_form_text" type ="text" name="muc_luong" required />
-=======
+
                           <input class="text FDT_form_text" type ="text" name="muc_luong" required/>
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
                       </th>
                       <th>
                           <span class ="FDT_feedback"></span>
@@ -82,18 +80,15 @@ include('serverInsert_FormDangTin.php');
                   <tr>
                       <th>
                           Số lượng:
-<<<<<<< HEAD
                       </th>
                       <th>
                           <input class="text FDT_form_text" type ="text" name="SL" required />
                       </th>
                       <th>
                           <span class ="FDT_feedback"></span>
-=======
                       </th>
                       <th>
                           <input class="text FDT_form_text" type ="text" name="SL" required/>
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
                       </th>
 
                   </tr>
@@ -158,15 +153,13 @@ include('serverInsert_FormDangTin.php');
               </table>
             <input class="submit FDT_submit" type="submit" value="upload" name="Upload"/>
         </form>
-
-
     </div>
+    <?php
+    }
+   ?>
 <!-----------------------------------------------xu ly thong tin nhap vao------------------------------------------------->
-
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jqueryFormDangTin.js"></script>
-
-
 <?php
     include('footer.php');
 ?>

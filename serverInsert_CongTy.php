@@ -1,4 +1,4 @@
-<?php
+\<?php
 /**
  * Created by PhpStorm.
  * User: HieuUit
@@ -22,7 +22,6 @@ if (isset($_POST['Upload'])) {
     $TGLamViec =  $_POST['tg'];
     $DaiNgo =  $_POST['dai_ngo'];
 
-<<<<<<< HEAD
     //xu ly logo cong ty
     $logoname = $_FILES['img_logo']['name'];
     $logotmp_name = $_FILES['nameimage']['tmp_name'];
@@ -34,10 +33,6 @@ if (isset($_POST['Upload'])) {
 
 
     $MaCongTy = (int)$result['MaCongTy'];
-
-=======
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
-
 
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
@@ -57,16 +52,14 @@ if (isset($_POST['Upload'])) {
     //lay ma user
     $MaUser = (int)$arrUser['MaUser'];
 
-<<<<<<< HEAD
     //day tap tin anh len data
     move_uploaded_file($logotmp_name, $folder.$logoname);
     move_uploaded_file($Ctytmp_name, $folder.$Ctyname);
         $query = "INSERT INTO congty (TenCongTy,DiaChiCongTy, TGLamViecCongTy, DaiNgoCongTy, IconCongTy, AnhCongTy, IDuser) 
   			  VALUES('$TenCty', '$DiaChi', '$TGLamViec','$DaiNgo', '/images/$logoname', '/images/$Ctyname' '$MaUser')";
-=======
-        $query = "INSERT INTO congty (TenCongTy,DiaChiCongTy, TGLamViecCongTy, DaiNgoCongTy, IDuser, , IConCongTy, AnhCongTy) 
+     $query = "INSERT INTO congty (TenCongTy,DiaChiCongTy, TGLamViecCongTy, DaiNgoCongTy, IDuser, , IConCongTy, AnhCongTy) 
   			  VALUES('$TenCty', '$DiaChi', '$TGLamViec','$DaiNgo','$', '$MaUser','$LinhVuc','$MaCongTy')";
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
+
 
         mysqli_query($db, $query);
 
@@ -78,9 +71,6 @@ if (isset($_POST['Upload'])) {
 
         <?php
         sleep(3);
-<<<<<<< HEAD
         header('location: /NhaTuyenDung.php');
-=======
-        header('location: /DoAn.php');
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
+		header('location: /DoAn.php');
 }

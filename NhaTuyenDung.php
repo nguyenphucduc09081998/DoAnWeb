@@ -16,7 +16,7 @@ include ('header.php');
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-2 NTD_menu">
-                    <a href="#" title="quản lý tin" >Quản lý tin đăng</a>
+                    <a href="QLTinDang.php" title="quản lý tin" >Quản lý tin đăng</a>
                     <i class="fa fa-file-text" style="font-size48px;"></i>
                 </div>
                 <div class="col-md-2 NTD_menu">

@@ -52,7 +52,11 @@
 				<!------------->
 				</div>
 				<div class="col-md-2">
+
 					<a id="dangki" href="/Logout.php"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Xuất </a>	
+
+					
+
 				</div>	
 			</div>
 		</div>
