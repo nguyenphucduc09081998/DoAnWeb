@@ -5,17 +5,15 @@
  * Date: 10/14/2018
  * Time: 1:25 PM
  */
-include('header.php');
-<<<<<<< HEAD
 session_start();
-=======
+include('header.php');
 
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 $db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 mysqli_set_charset($db, "utf8");
-?>
- <?php
-    $user = $_SESSION['username'];
+	
+	if(isset($_SESSION['username'])) {	
+	
+	$user = $_SESSION['username'];
 
     //lay thong tin user
     $conn = mysqli_query($db,"select * from user where Username = '$user'");
@@ -24,14 +22,6 @@ mysqli_set_charset($db, "utf8");
     $MaUser = (int)$arrUser['MaUser'];
     $cty = mysqli_query($db,"select * from congty where IDuser = $MaUser");
     $result = mysqli_fetch_array($cty);
-<<<<<<< HEAD
-   if(($result) == null){
-       header('location:TaoCongTy.php');
-   }
-=======
-
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
-
 
 ?>
     <link rel="stylesheet" type="text/css" href="css/stylesQLHoSo.css"/>
@@ -55,6 +45,7 @@ mysqli_set_charset($db, "utf8");
                         $changearr = mysqli_fetch_array($arrUsername);
                         $Username = $changearr['Username'];
                   ?>
+				   
                 <h3 class="QLHS_header"> Thông tin tài khoản</h3><br>
                 Tên tài khoản:
                 <input type="text" name="ten_TK_update" placeholder="<?php echo $Username; ?>" value=""/>
@@ -112,8 +103,19 @@ mysqli_set_charset($db, "utf8");
         </form>
 
     </div><!--end class QLHS_thongtin-->
+	<?php
+	}else{
+		?>
+		<div class="container">
+			<h2 style="font-family: 'Poor Story', cursive; color:red;">Bạn Cần Đăng Nhập </h2>
+			<a href="/login.php">Đăng Nhập</a>
+			
+		</div>
+	<?php
+	} 
+   
 
-
-<?php
+?>
+	<?php
     include('footer.php')
 ?>

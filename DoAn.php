@@ -1,10 +1,6 @@
 <?php
 session_start();
 include('header.php');
-<<<<<<< HEAD
-session_start();
-=======
->>>>>>> 245ca3d7d2379f4264fca93da7d5a112e5b3f432
 
 ?>
 
@@ -21,9 +17,6 @@ session_start();
 					$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 					//mysqli_select_db("datawed");
 					$img = mysqli_query($db,"select * from congty");
-					
-					
-					
 					while($row = mysqli_fetch_array($img))
 					{			
 						$b =  $row['MaCongTy'];

@@ -3,7 +3,11 @@ include('header.php');
 
 session_start();
 //lấy thông tin đăng nhập
-$user = $_SESSION['username'];
+if(!isset($_SESSION['username'])){
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
+else
+    $user = $_SESSION['username'];
 //ket noi database
 $db = mysqli_connect('localhost', 'root', '', 'dataweb');
 mysqli_set_charset($db, "utf8");
@@ -78,5 +82,6 @@ $MaUser = (int)$arrUser['MaUser'];
     </div>
 </section>
 <?php
+
 include('footer.php');
 ?>
