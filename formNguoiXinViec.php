@@ -1,4 +1,4 @@
-<?php
+ <?php
 include('header.php');
 
 ?>
@@ -12,7 +12,7 @@ include('header.php');
 			<form method="post" action="formNguoiXinViec.php" enctype="multipart/form-data">
 								
 				<table class="fNXV_table" >
-				<?php include('errors.php'); ?>
+					<tr><td><?php include('errors.php'); ?></td></tr>
 				
 					<tr>
 						<td colspan="2" class="title">Form Đăng Kí Cho Người Xin Việc</td>
@@ -47,10 +47,14 @@ include('header.php');
 					<tr>
 						
 						<?php
-						//$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
-						 $a = $_GET['idMaCongViec'];
+						$db = mysqli_connect("localhost","root","","dataweb");
+						//$a = $_GET['idMaCongViec'];
+						//var_dump($a);
+						
+						$b = $_SESSION['testMaCongViec'];
+					
 						//echo $a;
-						$res =  mysqli_query($db,"SELECT  MaCongViec FROM congviec WHERE  MaCongViec = $a");
+						$res =  mysqli_query($db,"SELECT  MaCongViec FROM congviec WHERE  MaCongViec = '$b' ");
 						$res1 = mysqli_fetch_array($res);
 						?>
 						<?php 

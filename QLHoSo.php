@@ -5,7 +5,7 @@
  * Date: 10/14/2018
  * Time: 1:25 PM
  */
-session_start();
+
 include('header.php');
 
 $db = mysqli_connect("localhost","root","","dataweb");//ket noi data

@@ -16,7 +16,7 @@
     $arrUser = mysqli_fetch_array($conn);
 //lay ma user
     $MaUser = (int)$arrUser['MaUser'];
-    $cty = mysqli_query($db,"select * from congty where IDuser = $MaUser");
+    $cty = mysqli_query($db,"select * from congty where IDuser = '$MaUser' ");
     $result = mysqli_fetch_array($cty);
     if(($result) == null){
         header('location:TaoCongTy.php');

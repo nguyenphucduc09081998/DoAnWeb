@@ -1,10 +1,6 @@
 <?php
-session_start();
 include('header.php');
-
 ?>
-
-
 <link rel="stylesheet" href="css/stylesDoAn.css">
 	<!-----------------------chia tung cot cong ty----------------------------------->
 	<section >

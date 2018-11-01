@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 // initializing variables
 
 $errors = array(); 
@@ -19,7 +17,6 @@ if (isset($_POST['NapHoSo'])) {
 	$KinhNghiem = $_POST['KinhNghiem'];
 	$TrinhDo =  $_POST['TrinhDo'];
 	$MaCongViec = $_POST['MaCongViec'];
-
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($Ten)) { array_push($errors, "chua nhap ten"); }
@@ -35,7 +32,7 @@ $pattern = '#^[a-z][a-z0-9\._]{2,31}@[a-z0-9\-]{3,}(\.[a-z]{2,4}){1,2}$#';
 
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM nguoixinviec WHERE EmailNguoiXinViec='$Email' ";
+  $user_check_query = "SELECT * FROM nguoixinviec WHERE EmailNguoiXinViec= '$Email' ";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
@@ -59,12 +56,11 @@ mysqli_set_charset($db, "utf8");
 	//echo "nap  thanh cong";
 	?>
 	
-	<h2 style="font-size: 30px; margin:auto;">
-	<?php echo "Nạp Hồ sơ thành công"; ?>
-	</h2>
+	
 	
 	<?php
-	sleep(3);
+	array_push($errors, " Nạp Hồ sơ thành công");
+	sleep(5);
 	header('location: /DoAn.php');
 	
   }

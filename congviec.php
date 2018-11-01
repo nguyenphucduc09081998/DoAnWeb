@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+
 ?>
 <section>
 	<div class="container">
@@ -30,6 +31,10 @@ include('header.php');
 					<form action="/NguoiXinViec.php">			
 					</form>		
 					<a href="/formNguoiXinViec.php?idMaCongViec=<?php echo $result1['MaCongViec']; ?>"><button type="button" class="btn btn-success aaa" href="">Ứng Tuyển</button></a>
+					<?php
+					$_SESSION['testMaCongViec'] = $result1['MaCongViec'];
+					//var_dump($_SESSION['testMaCongViec']);die();
+					?>
 				</div>
 			</div>
 			

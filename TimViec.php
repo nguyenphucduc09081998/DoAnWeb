@@ -46,10 +46,10 @@ include('header.php');
 								<h5>Số Lượng: <?php echo $result["SoLuongCongViec"]; ?></h5>
 								<h5> Mức Lương:<?php echo $result["MucLuongCongViec"]; ?><h5>
 							</p>
-						</div>
+							</div>
 									
+						</div>
 					</div>
-				</div>
 				</div>
 				<?php	
 				}

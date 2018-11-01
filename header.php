@@ -21,7 +21,8 @@
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>--->
-	
+	<?php	session_start();?>
+
 <script>
 	 document.getElementById("change").style.text = "sfa";
 </script>
@@ -42,7 +43,7 @@
 					<a rel="nofollow" href="/NhaTuyenDung.php" title="Trang tuyển dụng"><img src="images/admin.png" height="25" width="25" />Tuyển Dụng</a><!--rel="nofollow" là gì-->
 				</div>
 				<div class="col-md-2">
-					<a id="dangnhap" href="/login.php" ><!--target="targetframe"-->  <img src="images/password.png" height="25" width="25" /> Đăng Nhập</a>				
+					<a id="dangnhap" href="/login.php" <!--target="targetframe"-->  <img src="images/password.png" height="25" width="25" /> Đăng Nhập</a>				
 				<!------>
 			<?php
 		
@@ -52,11 +53,7 @@
 				<!------------->
 				</div>
 				<div class="col-md-2">
-
 					<a id="dangki" href="/Logout.php"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Xuất </a>	
-
-					
-
 				</div>	
 			</div>
 		</div>
@@ -68,11 +65,8 @@
 			<div class="row">
 				<div class="col-md-2">
 				</div>	
-				<form action="/search_congviec.php" method="post">
-					<div class="col-md-2">
-						<p style="margin-top:0px;font-size: 20px;font-family: 'Poor Story', cursive;">Tên Công Việc:</p>
-					</div>				
-					<div class="col-md-4">
+				<form action="/search_congviec.php" method="post">	
+					<div class="col-md-6">
 						 <input type="text" name="txtsearch" class="form-control" placeholder="search...">
 					</div>
 					<div class="col-md-2">
