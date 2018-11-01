@@ -83,6 +83,10 @@ if (isset($_POST['login_user'])) {
 	  //
   	  //$_SESSION['success'] = "You are now logged in";
 			
+			
+			
+			
+			
 	 header('location: /DoAn.php');
   	}else {
   		array_push($errors, "username/password Sai");
@@ -91,9 +95,6 @@ if (isset($_POST['login_user'])) {
   }
 
 }
-
-
-
 
 
 
