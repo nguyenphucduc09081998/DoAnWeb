@@ -1,38 +1,33 @@
-<?php include('header.php'); 
-	$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
-					//mysqli_select_db("datawed");
-					mysqli_set_charset($db, "utf8");
+<?php 
+	include('header.php'); 
+	$db = mysqli_connect("localhost","root","","dataweb");//ket noi data	
+	mysqli_set_charset($db, "utf8");
     $search = $_POST['txtsearch']; 
-  
-     
-    $min_length = 3;
-    // nhap it hon 3 ki tu
-     
+      
+    $min_length = 3;// nhap it hon 3 ki tu
+        
     if(strlen($search) >= $min_length){ // if query length is more or equal minimum length then
-         
-       
-         
+        
         $raw_results = mysqli_query($db,"SELECT * FROM congviec,congty
-            WHERE (`TenCongViec` LIKE '%".$search."%') and congty.MaCongTy = congviec.MaCongTy   ") ;
-
-         
+            WHERE (`TenCongViec` LIKE '%".$search."%') and congty.MaCongTy = congviec.MaCongTy ") ;         
         if(mysqli_num_rows($raw_results) > 0){ // if one or more rows are returned do following
-             
+		?>
+		<div class="container search_congviec">
+					<div class="row">
+		<?php
             while($results = mysqli_fetch_array($raw_results)){
-            ?>
-                <br><br><br>
-				<div class="container">
+            ?>              
+				
 				<div class="col-md-6">
 					<div class= "TimViec">
 						<div class="TimViec_logo">
-							<a href="/congty.php?idCongTy=<?php echo $results['MaCongTy'];?>">
-								<img class="TimViec_iconcongty" src="<?php echo $results['IconCongTy'];?>" >
+							<a href="/congviec.php?idCongViec=<?php echo $results['MaCongViec'];?>">
+								<img class="TimViec_iconcongty" src="<?php echo $results['AnhCongViec'];?>" >
 							</a>								
 							<a class="TimViec_tencongviec" href="/congviec.php?idCongViec= <?php echo $results['MaCongViec']; ?>" > 
 								<h5><?php echo $results["TenCongViec"]; ?> </h5>
 							</a>
-							<div class="abc">
-								
+							<div class="abc">										
 							<p class="TimViec_YeuCau_MoTa">
 								<h5>Địa Chỉ: <?php echo $results["DiaChiCongTy"]; ?></h5>
 								<h5>Số Lượng: <?php echo $results["SoLuongCongViec"]; ?></h5>
@@ -43,10 +38,15 @@
 						</div>
 					</div>
 				</div>
-				</div>
-				<br><br><br>
+					
+				
             <?php
 			}
+			?>
+		</div>
+					
+				</div>
+			<?php
              
         }
         else{ 

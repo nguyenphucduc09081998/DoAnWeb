@@ -8,11 +8,24 @@ include('header.php');
 			<h3 style="font-family: 'Pacifico', cursive;color:#ade600; font-size: 40px; ">Nhà Tuyển Dụng</h3>
 			<div class="row">
 				
-				<?php
-
+				<?php	
+				
 					$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 					//mysqli_select_db("datawed");
-					$img = mysqli_query($db,"select * from congty");
+					if (isset($_GET['pageno'])) {
+						$pageno = $_GET['pageno'];
+					} else {
+						$pageno = 1;
+					}
+					
+					$no_of_records_per_page = 6;//số tin trong 1 trang
+					$offset = ($pageno-1) * $no_of_records_per_page; // để bắt đầu lấy từ bao nhiêu
+					$total_pages_sql = "SELECT COUNT(*) FROM congty";
+					$result = mysqli_query($db,$total_pages_sql);
+					$total_rows = mysqli_fetch_array($result)[0];
+					$total_pages = ceil($total_rows / $no_of_records_per_page);
+					
+					$img = mysqli_query($db,"SELECT * FROM congty LIMIT $offset, $no_of_records_per_page");
 					
 					
 					
@@ -35,26 +48,31 @@ include('header.php');
 						<?php
 						}
 					}
-					?><br><br>
+					?>
 					
 			</div>
 		</div>
 	</section>
 	<!----phan trang--------------------------------------------->
-	<br><br><br><br>
+
 	<section>
-        <div class="container">
-            <div class="table-responsive" id="">
-                <!--<div class="span9  pagination">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                   
-                </div>-->
+        <div class="container phantrang">
+            <div class="row" id="">
+                <ul class="pagination" >
+				<!------ <li><a href="?pageno=1">First</a></li>---->
+				<li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+				
+					<a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Trước</a>
+				</li>
+				<li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+					<a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Sau</a>
+				</li>
+				<!------<li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>---->
+			</ul>
             </div>
         </div>
     </section>
-	<br><br><br><br>
+
 	<!------------>
 	<!------footer----------------------------------------------->
 <?php

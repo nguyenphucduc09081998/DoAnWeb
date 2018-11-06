@@ -279,8 +279,6 @@ header .search{
 	
 }
 
-
-
 .TimViec_title{
 		padding-top: 70px;
 	color:black;
@@ -335,6 +333,12 @@ padding-top: 30px;
 margin-top: 1px;
 }
 
+/*----------------------------page search cong viec-------------------------------*/
+.search_congviec {
+	margin-top: 5px;
+	background: #ddd;
+	border: 1px solid #ddd;
+}
 
 
 
