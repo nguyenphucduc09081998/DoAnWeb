@@ -5,12 +5,11 @@ if($conn) {
 
  if(isset($_POST['uploadfilesub'])) {
 	 $TenCV =  $_POST['diachiimage'];
+	 
   $filename = $_FILES['uploadfile']['name'];
 
   $filetmpname = $_FILES['uploadfile']['tmp_name'];
-  
   $folder = 'images/';
-
   //$dan = '/images/';
   move_uploaded_file($filetmpname, $folder.$filename);
  

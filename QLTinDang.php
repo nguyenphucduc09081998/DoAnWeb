@@ -1,7 +1,7 @@
 <?php
 include('header.php');
 
-session_start();
+
 //lấy thông tin đăng nhập
 if(!isset($_SESSION['username'])){
     header('Location: ' . $_SERVER['HTTP_REFERER']);

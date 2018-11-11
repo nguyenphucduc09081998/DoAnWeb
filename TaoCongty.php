@@ -10,7 +10,10 @@
     include ('serverInsert_CongTy.php');
 ?>
 <link rel="stylesheet" href="css/stylesTaoCongTy.css">
-<div class="container">
+
+
+	
+	<div class="container">
     <div class="form_dangki">
         <form class="TCT_dang_tin" method ="post" action="serverInsert_CongTy.php">
         <div class="TCT_dang_tin" method ="post" action="serverInsert_CongTy.php">
@@ -20,13 +23,13 @@
                     <th>Tên tài khoản:</th>
                     <td>
                         <input class="text TCT_form_text" type="text" name="ten_tk"/>
-                        <input class="text TCT_form_text" type="text" name="ten_tk" required/>
+                    
                     </td>
                 </tr>
                 <tr>
                     <th>Mật khẩu: </th>
                     <td>
-                        <input class="text TCT_form_text" type="text" name="matkhau"/>
+                     
                         <input class="text TCT_form_text" type="text" name="matkhau" required/>
                     </td>
                 </tr>
@@ -117,7 +120,15 @@
         </div>
     </form>
     </div>
-</div>
+	
+
+
+
+
+
+
+
+
 
 <?php
     include('footer.php')

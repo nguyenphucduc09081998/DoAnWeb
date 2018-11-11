@@ -1,80 +1,119 @@
 <?php
-session_start();
+
 
 // initializing variables
 
 $errors = array();
 
+$mauser = $_SESSION['mauser'];
+
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'dataweb');
-
+mysqli_set_charset($db, "utf8");
 // REGISTER USER
-if (isset($_POST['update'])) {
+if (isset($_POST['Update_CongTy'])) {
     // receive all input values from the form
     $ten_cty =$_POST['ten_cty_update'];
+	$DiaChi_CongTy =$_POST['dia_chi_update'];
+	$ThoiGianLamViecCT =$_POST['thoigian_lamviec_update'];
+	$DiaNgoCongTy =$_POST['dai_ngo_update'];
+	
+	//lay icon cong ty ra
+	$filename = $_FILES['icon_congty_udate']['name'];
+	$filetmpname = $_FILES['icon_congty_udate']['tmp_name'];
+	
 
-    if(isset($_POST['ten_cty_update']))
+	////lay anh cong ty ra
+	$filename1 = $_FILES['Edit_AnhCongTy']['name'];
+	$filetmpname1 = $_FILES['Edit_AnhCongTy']['tmp_name'];
+	$folder = 'images/';
+	
+	 $a = 0;
+	
+	$sql = "UPDATE congty SET";
+	
+	if (file_exists($_FILES['icon_congty_udate']['tmp_name'])) {
+		$sql .= " IconCongTy = '/images/$filename'";
+		$a+=1;	
+		move_uploaded_file($filetmpname, $folder.$filename);
+	}
+	
+	
+	if (file_exists($_FILES['Edit_AnhCongTy']['tmp_name'])) {
+		if(($a != 0)){
+			$sql .= ", AnhCongTy = '/images/$filename1'";
+			move_uploaded_file($filetmpname1, $folder.$filename1);
+		}
+		else{
+			$sql .= " AnhCongTy = '/images/$filename1'";
+			move_uploaded_file($filetmpname1, $folder.$filename1);
+			$a++;
+		}
+	}
+	
+    if(!empty($ten_cty) ) 
     {
-        $sql = "UPDATE congty SET TenCongTy=$ten_cty WHERE id=1";
+		if(($a != 0)){
+			 $sql .= ", TenCongTy = '$ten_cty'";
+		}
+		else{
+		   $sql .= " TenCongTy = '$ten_cty'";
+		   $a++;
+		}
+		
     }
+	
+	 if(!empty($DiaChi_CongTy))
+    {
+		if($a != 0){
+			$sql .= ", DiaChiCongTy = '$DiaChi_CongTy'";
+		}
+		else{
+			 $sql .= " DiaChiCongTy = '$DiaChi_CongTy'";
+			 $a++;
+		} 
+	}
 
-    if ($db->query($sql) === TRUE) {
-        echo "Record updated successfully";
-    }
-    else echo "faild";
-   /* $Email = $_POST['Email'];
-    $SoDienThoai =  $_POST['SoDienThoai'];
-    $KinhNghiem = $_POST['KinhNghiem'];
-    $TrinhDo =  $_POST['TrinhDo'];
-    $MaCongViec = $_POST['MaCongViec'];
+	if(!empty($ThoiGianLamViecCT))
+    {
+		if($a != 0)
+			$sql .= ", TGLamViecCongTy = '$ThoiGianLamViecCT'";
 
-    // form validation: ensure that the form is correctly filled ...
-    // by adding (array_push()) corresponding error unto $errors array
-    if (empty($Ten)) { array_push($errors, "chua nhap ten"); }
-    // if (empty($SoDienThoai)) { array_push($errors, "chua nhap sdt"); }
-    if (empty($KinhNghiem)) { array_push($errors, "chua nhap kinhnghiem"); }
-    if (empty($TrinhDo)) { array_push($errors, "chua nhap trinhdo"); }
+        
+		else{
+			$a++;
+		 $sql .= " TGLamViecCongTy = '$ThoiGianLamViecCT'";
+		}
+	}
+
+	if(!empty($DiaNgoCongTy))
+    {
+		if($a != 0)
+			$sql .= ", DaiNgoCongTy = '$DiaNgoCongTy'";
+		
+		else{
+		  $sql .= " DaiNgoCongTy = '$DiaNgoCongTy'";
+		  $a++;
+		}
+	}
 
 
-    $pattern = '#^[a-z][a-z0-9\._]{2,31}@[a-z0-9\-]{3,}(\.[a-z]{2,4}){1,2}$#';
-    if(preg_match($pattern, $Email, $match) == 0){
-        array_push($errors, " Email nhap khong hơp lệ");
-    }
+	
+	
+	$sql .=" WHERE IDuser= '$mauser'";
 
-    // first check the database to make sure
-    // a user does not already exist with the same username and/or email
-    $user_check_query = "SELECT * FROM nguoixinviec WHERE EmailNguoiXinViec='$Email' ";
-    $result = mysqli_query($db, $user_check_query);
-    $user = mysqli_fetch_assoc($result);
 
-    if ($user) { // if user exists
-        if ($user['EmailNguoiXinViec'] === $Email) {
-            array_push($errors, "Email da ton tai");
-        }
-    }
-    mysqli_set_charset($db, "utf8");
-    // Finally, register user if there are no errors in the form
-    if (count($errors) == 0) {
-        //$password = md5($password_1);//encrypt the password before saving in the database
+	if(mysqli_query($db, $sql)){
 
-        $query = "INSERT INTO nguoixinviec (TenNguoiXinViec,  EmailNguoiXinViec, SDTNguoiXinViec, TrinhDoNguoiXinViec, KinhNghiemNguoiXinViec, MaCongViec) 
-  			  VALUES('$Ten', '$Email', '$SoDienThoai','$TrinhDo','$KinhNghiem', '$MaCongViec')";
+		array_push($errors, "Update thành công");
+	}else{
+		array_push($errors, "Update thất bại");
+	}
+	
 
-        mysqli_query($db, $query);
-        //$_SESSION['username'] = $username;
-        //$_SESSION['success'] = "You are now logged in";
+	
 
-        //echo "nap  thanh cong";
-        ?>
-
-        <h2 style="font-size: 30px; margin:auto;">
-            <?php echo "Nạp Hồ sơ thành công"; ?>
-        </h2>
-
-        <?php
-        sleep(3);
-        header('location: /DoAn.php');
-
-    }*/
+  
+   
 }
 

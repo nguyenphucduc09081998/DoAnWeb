@@ -6,11 +6,16 @@
  * Time: 10:02 AM
  */
 include ('header.php');
+
 ?>
     <link rel="stylesheet" type="text/css" href="css/slideShow.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!------------------------menu quan ly-------------------------->
-    <section class="nav_menu">
+	
+    <?php
+	if(isset($_SESSION['username'])){
+	?>
+	<section class="nav_menu">
         <div class="container thong-tin">
             <div class="row">
                 <div class="col-md-2">
@@ -102,6 +107,19 @@ include ('header.php');
         <span class="dots" onclick="currentSlide(4)"></span>
 
     </div>
+	<?php
+	}else{
+		?>
+		<div class="container">
+			<h2 style="font-family: 'Poor Story', cursive; color:red;">Bạn Cần Đăng Nhập </h2>
+			<a href="/login.php">Đăng Nhập</a>
+			
+		</div>
+		<?php
+	}
+	?>
+	
+	
     <!----------------------slide show danh gia----------------------------------->
     <script type="text/javascript" src="js/NhaTuyenDung.js"></script>
 

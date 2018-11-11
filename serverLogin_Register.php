@@ -16,14 +16,15 @@ if (isset($_POST['reg_user'])) {
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
+  
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
 
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
-	
+	array_push($errors, "Password nhập lại không đúng");
+
   }
 
   // first check the database to make sure 
@@ -34,8 +35,8 @@ if (isset($_POST['reg_user'])) {
   
   if ($user) { // if user exists
     if ($user['Username'] === $username) {
-      array_push($errors, "Username already exists");
-	  header('location: /register.php');
+      array_push($errors, "Username đã tồn tại");
+	  //header('location: /register.php');
     }
   }
 
@@ -50,7 +51,7 @@ if (isset($_POST['reg_user'])) {
   	$_SESSION['username'] = $username;
   	//$_SESSION['success'] = "You are now logged in";
 	
-	echo "dang ki thanh cong và bạn có thể đăng nhập";
+	array_push($errors, "Đăng kí thành công và bạn có thể đăng nhập");
 	sleep(1);
 	/*header('location: index.php');*/
   }
@@ -71,13 +72,23 @@ if (isset($_POST['login_user'])) {
   	$password = md5($password);
   	$query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
+	
+	
+	
   	if (mysqli_num_rows($results) == 1) {
+		
+		$row = mysqli_fetch_array($results);
+		$MaUser= $row['MaUser'];
+		
+		
+		$_SESSION['mauser'] = $MaUser;
   	  $_SESSION['username'] = $username;
+	  
   	  $_SESSION['success'] = "You are now logged in";
-			
+	
 	  header('location: /DoAn.php');
   	}else {
-  		array_push($errors, "Wrong username/password combination");
+  		array_push($errors, "Mật Khẩu hoặc tài khoản không đúng");
 		//echo"Login ko thanh cong";
   	}
   }

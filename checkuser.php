@@ -26,10 +26,6 @@
 		}
 		//print_r($post);
 		
-		
-		
-		
-		
 		// Mảng giá trị user_name đã tồn tại
 		//$user_arr = array("2cweb", "2cwebvn", "chickchick");
 		
@@ -37,11 +33,11 @@
 		// User_name thuộc 1 giá trị trong mảng => user_name tồn tại
 		if(in_array($user, $post))
 		{
-			echo "<span><strong>{$user}</strong> đã tồn tại, </span>";
-		}
+			echo "<span><strong>Username: {$user}</strong> đã tồn tại! </span>";
+		}	
 		else // Ngược lại user_name Ko tồn tại
 		{
-			echo "<span><strong>{$user}</strong> thành công!</span>";	
+			echo "<span><strong>Username: {$user}</strong> co the dung!</span>";	
 		}
 	}
 

@@ -43,14 +43,14 @@ $(document).ready(function() {
 				<div class="col-md-3">
 				</div>
 				<div class="col-md-6">
-					<form  method="post" action="serverLogin_Register.php" class="form_register">
+					<form  method="post" action="register.php" class="form_register">
 						<?php include('errors.php'); ?>
 						<br><br>
 						<h2>Register</h2>
 						
 						<label>Username</label><br>
 						<input type="text" name="username" id="username" placeholder="Username" required><br>
-						<div class="thongbao"></div>
+						<div class="thongbao" style="color:red;"></div>
 						<label>Password</label><br>
 						<input type="password" name="password_1" placeholder="Password" required><br>
 						
@@ -72,3 +72,11 @@ $(document).ready(function() {
 	
 </body>
 </html>
+
+
+
+
+
+
+
+

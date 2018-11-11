@@ -18,6 +18,8 @@
     $MaUser = (int)$arrUser['MaUser'];
     $cty = mysqli_query($db,"select * from congty where IDuser = '$MaUser' ");
     $result = mysqli_fetch_array($cty);
+	
+	
     if(($result) == null){
         header('location:TaoCongTy.php');
     }
@@ -25,7 +27,7 @@
 
     if (isset($_POST['Upload']))
         $TenCV =  $_POST['ten_cv'];
-    if (isset($_POST['updatecongviec'])) {
+    if (isset($_POST['Update_CongTy'])) {
         $TenCV =  $_POST['ten_cv'];
 
         $MoTa = $_POST['FDT_mo_ta'];

@@ -5,24 +5,16 @@
  * Date: 10/9/2018
  * Time: 6:56 PM
  */
-  
+
     include ('header.php');
-    if(!isset($SESSION['username'])){
+    include ('serverInsert_FormDangtin.php');
     ?>
-        <div class="container ">
-			<h2 style="font-family: 'Poor Story', cursive; color:red; text-align: center;">Bạn Cần Đăng Nhập </h2>
-			<a href="/login.php">Đăng Nhập</a>
-		</div>
-		<?php
-    }else{
-        include ('serverInsert_FormDangtin.php');
-        ?>
-         <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
+    
+<link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
+
+
     <div class="container">
-
-        <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangtin.php" enctype="multipart/form-data" >
-
-        <form class="FDT_dang_tin" method ="post" action="serverInsert_FormDangTin.php">
+        <form class="FDT_dang_tin" method ="post" action="formdangtin.php" enctype="multipart/form-data">
 
               <table class="FDT_table">
                   <tr>
@@ -31,9 +23,6 @@
                       </th>
                       <th>
                           <input class="text FDT_form_text" type="text" name="ten_cv" required />
-
-                          <input class="text FDT_form_text" type="text" name="ten_cv" required/>
-
                       </th>
                       <th>
                           <span class ="FDT_feedback"></span>
@@ -69,8 +58,6 @@
                       <th>
 
                           <input class="text FDT_form_text" type ="text" name="muc_luong" required />
-
-                          <input class="text FDT_form_text" type ="text" name="muc_luong" required/>
                       </th>
                       <th>
                           <span class ="FDT_feedback"></span>
@@ -87,35 +74,6 @@
                       <th>
                           <span class ="FDT_feedback"></span>
                       </th>
-                      <th>
-                          <input class="text FDT_form_text" type ="text" name="SL" required/>
-                      </th>
-
-                  </tr>
-
-                  <tr>
-                      <th>Tính chất</th>
-                      <td class="combo_box">
-                          <select class="nhap" name="TC">
-                              <option value="0">Part Time</option>
-                              <option value="1">Full Time</option>
-                          </select>
-                      </td>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
-                  </tr>
-
-                  <tr class="Nganh">
-                      <th>Lĩnh vực</th>
-                      <td class="combo_box">
-                          <select  name="linh_vuc">
-                              <option value="1">Công nghệ thông tin</option>
-                              <option value="2">Điện tử - kĩ thuật</option>
-                              <option value="3">Ngân hàng - tài chính</option>
-                              <option value="4">Kinh tế</option>
-                          </select>
-                      </td>
                   </tr>
 
                   <tr>
@@ -151,15 +109,13 @@
                       </th>
                   </tr>
               </table>
-            <input class="submit FDT_submit" type="submit" value="upload" name="Upload"/>
+            <!---<input class="submit FDT_submit" type="submit" value="upload" name="Upload"/>--->
+			 <button type="submit" class="btn FDT_submit" name="ThemCongViec">Thêm Công Việc</button><br>
         </form>
     </div>
-    <?php
-    }
-   ?>
+  
 <!-----------------------------------------------xu ly thong tin nhap vao------------------------------------------------->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jqueryFormDangTin.js"></script>
+
 <?php
     include('footer.php');
 ?>

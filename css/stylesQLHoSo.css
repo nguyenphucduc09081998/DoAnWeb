@@ -31,12 +31,18 @@ h1{
     margin-right: auto;
     margin-top: 10px;
     text-align: center;
+	
 }
 .submit{
     height: 50px;
     width: 150px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
+
+.submit:hover{
+   background: red;
+}
+
 .QLHS_AnhCongTy{
     width: 100%;
 }
