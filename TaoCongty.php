@@ -8,31 +8,27 @@
 
     include ('header.php');
     include ('serverInsert_CongTy.php');
+	$a = $_SESSION['username'];
+	
 ?>
 <link rel="stylesheet" href="css/stylesTaoCongTy.css">
 
 
 	
-	<div class="container">
-    <div class="form_dangki">
-        <form class="TCT_dang_tin" method ="post" action="serverInsert_CongTy.php">
-        <div class="TCT_dang_tin" method ="post" action="serverInsert_CongTy.php">
+	<div class="container form_dangki">
+  
+        <form class="TCT_dang_tin" method ="post" action="">
+        <div class="TCT_dang_tin" >
             <h3 class="TCT_title">Thông tin tài khoản</h3>
             <table>
                 <tr>
                     <th>Tên tài khoản:</th>
                     <td>
-                        <input class="text TCT_form_text" type="text" name="ten_tk"/>
+                        <input class="text TCT_form_text" type="text" name="ten_tk" placeholder="<?php echo $a;?>" disabled  />
                     
                     </td>
                 </tr>
-                <tr>
-                    <th>Mật khẩu: </th>
-                    <td>
-                     
-                        <input class="text TCT_form_text" type="text" name="matkhau" required/>
-                    </td>
-                </tr>
+               
             </table>
 
             <h3 class="TCT_title">Thông tin công ty</h3>
@@ -42,7 +38,7 @@
                         Tên công ty:
                     </th>
                     <td>
-                        <input class="text TCT_form_text" type="text" name="ten_cty" required/>
+                        <input class="text TCT_form_text" type="text" name="ten_cty"  required />
                     </td>
                     <th>
                         <span class ="FDT_feedback"></span>
@@ -68,7 +64,7 @@
                         Logo Công ty:
                     </th>
                     <th>
-                        <input class="TCT_up_img" type="file" name ="img_logo"/>
+                        <input class="TCT_up_img" type="file" name="logo_congty" />
                     </th>
                 </tr>
                 <tr>
@@ -76,7 +72,7 @@
                         Ảnh công ty:
                     </th>
                     <th>
-                        <input class="TCT_up_img" type="file" name ="img_cty"/>
+                        <input class="TCT_up_img" type="file" name="anh_congty" />
                     </th>
                 </tr>
             </table>
@@ -88,7 +84,7 @@
                         Thời gian làm việc:
                     </th>
                     <td>
-                              <textarea class="text" name="tg" rows="4" cols="83" required>
+                              <textarea class="text" name="tg" rows="4" cols="83" required >
                               </textarea>
                     </td>
                     <th>
@@ -100,7 +96,7 @@
                         Đãi ngộ:
                     </th>
                     <td>
-                              <textarea class="text" name="dai_ngo" rows="4" cols="83" required>
+                              <textarea class="text" name="dai_ngo" rows="4" cols="83" required >
                               </textarea>
                     </td>
                     <th>
@@ -112,13 +108,12 @@
 
             <div class="TCT_submit">
 
-                <input class="submit" type="submit" value="Tạo hồ sơ" name="Upload"/>
+             <button type="submit" class="btn" name="Insert_CongTy">Thêm Công Ty</button><br>
             </div>
-        </form>
-                <input class="submit" type="submit" value="upload" name="Upload"/>
-            </div>
+      
+             
         </div>
-    </form>
+     </form>
     </div>
 	
 

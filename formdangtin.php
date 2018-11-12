@@ -14,7 +14,7 @@
 
 
     <div class="container">
-        <form class="FDT_dang_tin" method ="post" action="formdangtin.php" enctype="multipart/form-data">
+        <form class="FDT_dang_tin" method ="post" action="" enctype="multipart/form-data">
 
               <table class="FDT_table">
                   <tr>
@@ -24,9 +24,7 @@
                       <th>
                           <input class="text FDT_form_text" type="text" name="ten_cv" required />
                       </th>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
+                    
                   </tr>
                   <tr>
                       <th>
@@ -35,21 +33,16 @@
                       <th>
                           <textarea class="text" name="FDT_mo_ta" rows="4" cols="50" required></textarea>
                       </th>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
+                     
                   </tr>
                   <tr>
                       <th>
                           Yêu cầu:
                       </th>
                       <th>
-                          <textarea class="text" name="FDT_yeu_cau" rows="4" cols="50" required>
-                          </textarea>
+                          <textarea class="text" name="FDT_yeu_cau" rows="4" cols="50" required></textarea>
                       </th>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
+                     
                   </tr>
                   <tr>
                       <th>
@@ -59,9 +52,7 @@
 
                           <input class="text FDT_form_text" type ="text" name="muc_luong" required />
                       </th>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
+                     
 
                   </tr>
                   <tr>
@@ -69,11 +60,9 @@
                           Số lượng:
                       </th>
                       <th>
-                          <input class="text FDT_form_text" type ="text" name="SL" required />
+                          <input class="text FDT_form_text" type ="number" name="SL" pattern="[1-9]{1-5}" required />
                       </th>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
+                      
                   </tr>
 
                   <tr>
@@ -84,9 +73,7 @@
                               <option value="1">Full Time</option>
                           </select>
                       </td>
-                      <th>
-                          <span class ="FDT_feedback"></span>
-                      </th>
+                      
                   </tr>
 
                   <tr class="Nganh">
