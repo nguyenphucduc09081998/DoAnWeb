@@ -8,7 +8,7 @@
 
     include ('header.php');
     include ('serverInsert_CongTy.php');
-	$a = $_SESSION['username'];
+	$username = $_SESSION['username'];
 	
 ?>
 <link rel="stylesheet" href="css/stylesTaoCongTy.css">
@@ -17,14 +17,15 @@
 	
 	<div class="container form_dangki">
   
-        <form class="TCT_dang_tin" method ="post" action="">
+        <form class="TCT_dang_tin" method ="post" action="" enctype="multipart/form-data">
         <div class="TCT_dang_tin" >
+			<h1 color="red"><?php include('errors.php'); ?></h1>
             <h3 class="TCT_title">Thông tin tài khoản</h3>
             <table>
                 <tr>
                     <th>Tên tài khoản:</th>
                     <td>
-                        <input class="text TCT_form_text" type="text" name="ten_tk" placeholder="<?php echo $a;?>" disabled  />
+                        <input class="text TCT_form_text" type="text" name="ten_tk" placeholder="<?php echo $username;?>" disabled  />
                     
                     </td>
                 </tr>
@@ -64,7 +65,7 @@
                         Logo Công ty:
                     </th>
                     <th>
-                        <input class="TCT_up_img" type="file" name="logo_congty" />
+                        <input class="TCT_up_img" type="file" name="logo_congty" required />
                     </th>
                 </tr>
                 <tr>
@@ -72,7 +73,7 @@
                         Ảnh công ty:
                     </th>
                     <th>
-                        <input class="TCT_up_img" type="file" name="anh_congty" />
+                        <input class="TCT_up_img" type="file" name="anh_congty" required />
                     </th>
                 </tr>
             </table>
@@ -84,8 +85,7 @@
                         Thời gian làm việc:
                     </th>
                     <td>
-                              <textarea class="text" name="tg" rows="4" cols="83" required >
-                              </textarea>
+                              <textarea class="text" name="tg" rows="4" cols="83" required></textarea>
                     </td>
                     <th>
                         <span class ="TCT_feedback"></span>
@@ -96,8 +96,7 @@
                         Đãi ngộ:
                     </th>
                     <td>
-                              <textarea class="text" name="dai_ngo" rows="4" cols="83" required >
-                              </textarea>
+                              <textarea class="text" name="dai_ngo" rows="4" cols="83" required></textarea>
                     </td>
                     <th>
                         <span class ="TCT_feedback"></span>

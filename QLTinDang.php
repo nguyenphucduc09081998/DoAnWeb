@@ -1,28 +1,17 @@
 <?php
 include('header.php');
-
+include('XoaCongViec.php');
 
 //lấy thông tin đăng nhập
-if(!isset($_SESSION['username'])){
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-}
-else
+	
     $user = $_SESSION['username'];
-//ket noi database
-$db = mysqli_connect('localhost', 'root', '', 'dataweb');
-mysqli_set_charset($db, "utf8");
-$conn = mysqli_query($db,"select * from user where Username = '$user'");
-$arrUser = mysqli_fetch_array($conn);
-//lay ma user
-$MaUser = (int)$arrUser['MaUser'];
-?>
-<script type="text/javascript" src="js/NhaTuyenDung.js"></script>
-<link rel="stylesheet" type="text/css" href="css/slideShow.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<section>
-    <div class="container">
-        <div class="row">
-            <?php
+	$MaUser = $_SESSION['mauser'];
+	
+	
+	//ket noi database
+	$db = mysqli_connect('localhost', 'root', '', 'dataweb');
+	mysqli_set_charset($db, "utf8");
+
             $getCty = mysqli_query($db,"SELECT MaCongTy FROM congty WHERE  IDuser = $MaUser");
             $arrCty = mysqli_fetch_array($getCty);
 
@@ -35,50 +24,60 @@ $MaUser = (int)$arrUser['MaUser'];
 
             $result = mysqli_query($db,"SELECT DISTINCT TenCongViec,MaCongViec,MucLuongCongViec,YeuCauCongViec FROM congviec WHERE  MaCongTy = $Macty ");
             ?>
-                </div>
-            </div>
-        </div>
 
+
+
+<section>
+    <div class="container">
+        <div class="row">
         <?php
             if($Macty !=0){
                 ?>
-                <h3 class="ten_congty"> Những Công Việc Đang Tuyển Của Công Ty <?php  echo $res1['TenCongTy'];?></h3>
+                <h3 class="QLTinDang_title" > Những Công Việc Đang Tuyển Của Công Ty <?php  echo $res1['TenCongTy'];?></h3>
                 <?php
             }
             else{
-                echo '<script language="javascript">';
-                echo 'alert("Bạn chưa có tin tuyển dụng")';
-                echo '</script>';
-               
+                ?>
+                <h3 class="QLTinDang_title">Công Ty của bạn hiện chưa tuyển công việc nào</h3>
+                <?php              
             }
         ?>
-
-        <div class="row show_congviec">
-
+     
+		<form class="" method ="post" action="" enctype="multipart/form-data">
             <?php
-
             while($row = mysqli_fetch_array($result))
             {
                 ?>
-                <div class="container">
-                    <div class="col-md-8 congty_chung ">
-                        <div class="tencongviec_tencongty">
-                            <a class="tencongviec" href="/congviec.php?idCongViec= <?php echo $row['MaCongViec']; ?>">
+				
+                    <div class="QLTinDang_CongViec_Chung">
+                        <div class="col-md-8 QLTinDang_TenCongViec_ChiTietCongViec">
+                            <a class="QLTinDang_TenCongViec" href="#">
                                 <h5><?php echo $row["TenCongViec"]; ?> </h5>
                             </a>
-                            <a class="chitietcongviec">
+                            <a class="QLTinDang_ChiTietCongViec">
                                 <h6><?php echo $row['MucLuongCongViec'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
                                 <h6><?php echo $row['YeuCauCongViec'];?></h6>
                             </a>
                         </div>
-                    </div>
-                </div>
+						<div class="col-md-4 QLTinDang_Button_DUS">
+						<?php												
+								$_SESSION['MaCongViec'] = $row['MaCongViec'];
+								?>
+							
+							<a href="">
+								<button type="submit" class="btn FDT_submit" name="XoaCongViec">Xóa</button>	
+							</a>				
+							<button type="submit" class="btn btn-info" name="update_congViec">Sửa</button>
+							<button type="submit" class="btn btn-info" name="Xoa_CongViec">Xem Ứng Tuyển</button>
+						</div> 
+				</div> 					
                 <?php
             }
             ?>
+			</form>
 
-        </div>
-
+        
+	</div>
     </div>
 </section>
 <?php

@@ -340,6 +340,65 @@ margin-top: 1px;
 	border: 1px solid #ddd;
 }
 
+/*----------------------------page QL tin đăng-------------------------------*/
+.QLTinDang_title{
+	margin: 30px 0;
+	margin-left:100;
+	text-align: center;
+	font-family: Comic sans MS;
+	color:red;
+}
+.fffff{
+	
+}
+.abc{
+
+}
+.QLTinDang_CongViec_Chung{
+	
+	
+	
+	
+}
+.QLTinDang_TenCongViec_ChiTietCongViec{ 
+
+}
+.QLTinDang_TenCongViec_ChiTietCongViec .QLTinDang_TenCongViec{
+	text-decoration: none;
+	color: black;
+}
+.QLTinDang_TenCongViec_ChiTietCongViec .QLTinDang_ChiTietCongViec{
+	text-decoration: none;
+	color: red;
+}
+.QLTinDang_TenCongViec h5{
+	font-size: 30px;
+	text-align:center;
+	
+}
+.QLTinDang_TenCongViec h5:hover{
+	color: blue;
+}
+.QLTinDang_ChiTietCongViec h6{
+	font-size: 20px;
+	text-align:center;
+	color: black;
+}
+.QLTinDang_Button_DUS{
+	
+	
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

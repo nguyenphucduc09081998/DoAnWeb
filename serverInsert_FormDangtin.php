@@ -8,26 +8,22 @@
 // connect to the database
 	$db = mysqli_connect('localhost', 'root', '', 'dataweb');
 	mysqli_set_charset($db, "utf8");
-// REGISTER USER
-    $user = $_SESSION['username'];
 
-//lay thong tin user
-    $conn = mysqli_query($db,"select * from user where Username = '$user'");
-    $arrUser = mysqli_fetch_array($conn);
-//lay ma user
-    $MaUser = (int)$arrUser['MaUser'];
+	$MaUser = $_SESSION['mauser'];
 	
-    $cty = mysqli_query($db,"select * from congty where IDuser = '$MaUser' ");
+	$a ="select MaCongTy from congty where IDuser = '$MaUser'";
 	
-    $result = mysqli_fetch_array($cty);
-	
-	
-    if(($result) == null){
-        header('location:TaoCongTy.php');
-    }
-
-
+					$result = mysqli_query($db,$a);
+				//	$b = $result['MaCongTy'];
+				$b = mysqli_fetch_array($result);
+					$c = $b['MaCongTy'];
+					
+	//var_dump($MaUser);
+$errors = array();
     if (isset($_POST['ThemCongViec'])) {
+
+	
+	
         $TenCV =  $_POST['ten_cv'];
 
         $MoTa = $_POST['FDT_mo_ta'];
@@ -60,15 +56,15 @@
 		
 		
 			$query = "INSERT INTO congviec (TenCongViec, MoTaCongViec, MucLuongCongViec, YeuCauCongViec, TinhChatCongViec, SoLuongCongViec, NganhCongViec, AnhCongViec, MaCongTy) 
-  			  VALUES('$TenCV', '$MoTa', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','/images/$filename','$MaUser')";
+  			  VALUES('$TenCV', '$MoTa', '$MucLuong','$YeuCau','$TinhChat', '$SoLuong','$LinhVuc','/images/$filename','$c')";
 			  
 			
-		var_dump($query);
+		
 		
 		if(mysqli_query($db, $query)){
-			echo"Bạn Thêm Công Ty Thành Công";
+			array_push($errors, "Thêm Công Việc thành công");
 		}else{
-			echo"Bạn Thêm Công Ty Không Thành Công";
+			array_push($errors, "Thêm Công Việc Thất Bại");
 		}
 		
 		

@@ -8,15 +8,28 @@
 
     include ('header.php');
     include ('serverInsert_FormDangtin.php');
-    ?>
+	
+   ?>
     
 <link rel="stylesheet" type="text/css" href="css/stylesFormDangTin.css">
 
-
+<?php
+// REGISTER USER
+    $user = $_SESSION['username'];
+	$MaUser = $_SESSION['mauser'];
+    $cty = mysqli_query($db,"select * from congty where IDuser = '$MaUser' ");
+    $result = mysqli_fetch_array($cty);
+    if(($result) == null){
+        header('location:TaoCongTy.php');
+    }
+?>
     <div class="container">
         <form class="FDT_dang_tin" method ="post" action="" enctype="multipart/form-data">
 
               <table class="FDT_table">
+					<tr>
+					<h1 color="red"><?php include('errors.php'); ?></h1>
+					</tr>
                   <tr>
                       <th>
                           Tên công việc:
@@ -92,7 +105,7 @@
                           ảnh:
                       </th>
                       <th>
-                          <input class="FTD_up_img" type="file" name="nameimage"/>
+                          <input class="FTD_up_img" type="file" name="nameimage" required />
                       </th>
                   </tr>
               </table>
