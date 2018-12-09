@@ -7,7 +7,7 @@
 
 	$a = $_GET['idDeleteCongViec'];
 	$query = "DELETE FROM congviec WHERE MaCongViec = '$a' ";
-	
+
 	
 	if(mysqli_query($db, $query)){
 		echo 'ok';

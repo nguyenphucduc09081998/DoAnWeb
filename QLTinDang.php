@@ -29,7 +29,7 @@ include('header.php');
 
 <section>
     <div class="container">
-        <div class="row">
+        
         <?php
             if($Macty !=0){
                 ?>
@@ -45,57 +45,69 @@ include('header.php');
 				
       
 			?>
-			<table border="1" width=100%>
 			
 				<?php
 				while($row = mysqli_fetch_array($result))
 				{
 					?>	
-					<tr>	
-						<td width=70%>
-							<h1><?php echo $row['MaCongViec'];?></h1>
-							<div class="QLTinDang_CongViec_Chung">
-								<div class="QLTinDang_TenCongViec_ChiTietCongViec">
-									<a class="QLTinDang_TenCongViec" href="#">
-										<h5><?php echo $row["TenCongViec"]; ?> </h5>
-									</a>
-									<a class="QLTinDang_ChiTietCongViec">
-										<h6><?php echo $row['MucLuongCongViec'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
-										<h6><?php echo $row['YeuCauCongViec'];?></h6>
-									</a>
-								</div>
-						</td>
-							
+					<div class="row QLTinDang_paddingg">
+						<div class="col-md-8">
+							<!--<h1><?php //echo $row['MaCongViec'];?></h1>--->	
+							<div class="QLTinDang_ChiTietCongViec">
+								
+									<p class="QLTinDang_TenCongViec">
+										<?php echo $row["TenCongViec"]; ?>
+									</p>
+									<div class="QLTinDang_show-hide">
+									<p class="QLTinDang_MucLuongCongViec">
+										<?php echo $row['MucLuongCongViec'];?>
+									</p>
+										<!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
+									<p class="QLTinDang_YeuCauCongViec"><?php echo $row['YeuCauCongViec'];?></p>	
+									</div>		
+							</div>
+						</div>	
 
-							<td>
-								
-								
-								
-								
-								<a href="/....php?idDeleteCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
+<!--để làm chức năng sổ xuông
+<div class="col-md-2">					
+						<button type="button" class="run btn btn-info">Info</button>						
+						
+						</div>
+-->						
+						
+						<div class="col-md-4">	
+												
+								<a href="/XemUngTuyen.php?idXemUngTuyenCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
 									Xem Ứng Tuyển
 								</a>			
-								<a href="/....php?idDeleteCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
+								<a href="/SuaCongViec.php?idEditCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
 									Sửa
 								</a>
 								<a href="/XoaCongViec.php?idDeleteCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
 									Xóa
 								</a>												
-							</td>		
-								
-							</div> 	
-					</tr>						
+						</div>	
+					</div>	
+					
 					<?php
 				}
 				?>
-			
-			</table><?php
-		
+	<?php	
 ?>		
         
-	</div>
+	
     </div>
 </section>
+<!--
+<script>
+        $(document).ready(function(){
+            $(".run").click(function(){
+                $(".QLTinDang_show-hide").slideToggle();
+            });
+        });
+    </script>
+-->
+
 <?php
 
 include('footer.php');

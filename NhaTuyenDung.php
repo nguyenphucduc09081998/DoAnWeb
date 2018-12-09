@@ -18,26 +18,22 @@ include ('header.php');
 	<section class="nav_menu">
         <div class="container thong-tin">
             <div class="row">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-2 NTD_menu">
+                <div class="col-md-1">
+				</div>
+                <div class="col-md-3 NTD_menu">
                     <a href="QLTinDang.php" title="quản lý tin" >Quản lý tin đăng</a>
                     <i class="fa fa-file-text" style="font-size48px;"></i>
                 </div>
-                <div class="col-md-2 NTD_menu">
-                    <a href="#" title="hồ sơ" >Hồ sơ ứng tuyển</a>
-                    <i class="fa fa-address-card-o"></i>
-                </div>
-                <div class="col-md-2 NTD_menu">
+                
+                <div class="col-md-3 NTD_menu">
                     <a href="/formdangtin.php" title="đăng tin tuyển dụng">Đăng tin </a>
                     <i class="fa fa-plus-square"></i>
                 </div>
-                <div class="col-md-2 NTD_menu">
+                <div class="col-md-3 NTD_menu">
                     <a href="QLHoSo.php" title="thông tin">Thông tin tài khoản</a>
                     <i class="	fa fa-key"></i>
                 </div>
-                <div class="col-md-1">
-                </div>
+                
             </div>
         </div>
     </section>

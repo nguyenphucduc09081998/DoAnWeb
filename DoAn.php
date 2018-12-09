@@ -26,9 +26,7 @@ include('header.php');
 					$total_pages = ceil($total_rows / $no_of_records_per_page);
 					
 					$img = mysqli_query($db,"SELECT * FROM congty LIMIT $offset, $no_of_records_per_page");
-					
-					
-					
+
 					while($row = mysqli_fetch_array($img))
 					{			
 						$b =  $row['MaCongTy'];
