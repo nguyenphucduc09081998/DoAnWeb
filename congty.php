@@ -33,10 +33,8 @@ include('header.php');
 			</div>
 		</div>
 		<h3 class="ten_congty"> Những Công Việc Đang Tuyển Của Công Ty <?php  echo $res1['TenCongTy'];?></h3>
-		<div class="row show_congviec">
-			
-			<?php
-			
+		<div class="row show_congviec">	
+			<?php	
 			while($row = mysqli_fetch_array($result))
 			{		
 		?>

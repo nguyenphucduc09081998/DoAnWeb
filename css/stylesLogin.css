@@ -4,8 +4,10 @@ body h1{
 }
 .form_login{
 	margin-top: 20px;
+	margin-bottom: 20px;
 	border: 2px solid #e5e5e5;	
 	padding: 20px;
+	padding-bottom: 30px;
 	margin: 30px;
 
 }

@@ -24,9 +24,12 @@
 						<input type="password" placeholder="Password" name="password" required ><br><br>
 						
 						<!--<label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>--->
-						<button type="submit" class="btn" name="login_user" ><h3>Login</h3></button><br><br>
+						<button type="submit" class="btn" name="login_user" ><h3>Đăng Nhập</h3></button><br><br>
 						<div class="col-md-6">
-							<span class="psw"><a href="/register.php"><h4>Register</h4></a></span>
+							<span class="psw"><a href="/register.php"><h4>Đăng Kí</h4></a></span>
+						</div>
+						<div class="col-md-6">
+							<span class="psw"><a href=""><h4>Đổi Mật Khẩu</h4></a></span>
 						</div>
 					</form>
 				</div>

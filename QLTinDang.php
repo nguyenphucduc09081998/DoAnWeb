@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-include('XoaCongViec.php');
+
 
 //lấy thông tin đăng nhập
 	
@@ -41,41 +41,57 @@ include('XoaCongViec.php');
                 <h3 class="QLTinDang_title">Công Ty của bạn hiện chưa tuyển công việc nào</h3>
                 <?php              
             }
-        ?>
-     
-		<form class="" method ="post" action="" enctype="multipart/form-data">
-            <?php
-            while($row = mysqli_fetch_array($result))
-            {
-                ?>
+		
 				
-                    <div class="QLTinDang_CongViec_Chung">
-                        <div class="col-md-8 QLTinDang_TenCongViec_ChiTietCongViec">
-                            <a class="QLTinDang_TenCongViec" href="#">
-                                <h5><?php echo $row["TenCongViec"]; ?> </h5>
-                            </a>
-                            <a class="QLTinDang_ChiTietCongViec">
-                                <h6><?php echo $row['MucLuongCongViec'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
-                                <h6><?php echo $row['YeuCauCongViec'];?></h6>
-                            </a>
-                        </div>
-						<div class="col-md-4 QLTinDang_Button_DUS">
-						<?php												
-								$_SESSION['MaCongViec'] = $row['MaCongViec'];
-								?>
+      
+			?>
+			<table border="1" width=100%>
+			
+				<?php
+				while($row = mysqli_fetch_array($result))
+				{
+					?>	
+					<tr>	
+						<td width=70%>
+							<h1><?php echo $row['MaCongViec'];?></h1>
+							<div class="QLTinDang_CongViec_Chung">
+								<div class="QLTinDang_TenCongViec_ChiTietCongViec">
+									<a class="QLTinDang_TenCongViec" href="#">
+										<h5><?php echo $row["TenCongViec"]; ?> </h5>
+									</a>
+									<a class="QLTinDang_ChiTietCongViec">
+										<h6><?php echo $row['MucLuongCongViec'];?></h6><!------cai nay khong can xuat hien ten cong ty, xuat hien chi tiet cong viec thui--------->
+										<h6><?php echo $row['YeuCauCongViec'];?></h6>
+									</a>
+								</div>
+						</td>
 							
-							<a href="">
-								<button type="submit" class="btn FDT_submit" name="XoaCongViec">Xóa</button>	
-							</a>				
-							<button type="submit" class="btn btn-info" name="update_congViec">Sửa</button>
-							<button type="submit" class="btn btn-info" name="Xoa_CongViec">Xem Ứng Tuyển</button>
-						</div> 
-				</div> 					
-                <?php
-            }
-            ?>
-			</form>
 
+							<td>
+								
+								
+								
+								
+								<a href="/....php?idDeleteCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
+									Xem Ứng Tuyển
+								</a>			
+								<a href="/....php?idDeleteCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
+									Sửa
+								</a>
+								<a href="/XoaCongViec.php?idDeleteCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
+									Xóa
+								</a>												
+							</td>		
+								
+							</div> 	
+					</tr>						
+					<?php
+				}
+				?>
+			
+			</table><?php
+		
+?>		
         
 	</div>
     </div>
