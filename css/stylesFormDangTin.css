@@ -1,3 +1,10 @@
+.FDT_container{
+	border:1px solid red;
+	margin-top:20px;
+	margin-bottom:20px;
+	padding: 20px;
+	background-color: #ddd;
+}
 .FDT_form_text{
     width: 424px;
     margin-bottom: 5px;

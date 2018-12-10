@@ -19,9 +19,20 @@ if (isset($_POST['Update_CongViec'])) {
 	$MucLuongCongViec =$_POST['mucluong_update'];
 	$SoLuong =$_POST['Soluong_update'];
 	
+	//
+	$LinhVuc = (int)$_POST['linh_vuc'];
+	$TinhChat = (int)$_POST['tinhchat'];
+	//lay anh cong viec
 	
+	
+	$filename1 = $_FILES['Edit_AnhCongViec']['name'];
+	$filetmpname1 = $_FILES['Edit_AnhCongViec']['tmp_name'];
+	$folder = 'images/';
 	
 
+	
+	 
+	
 	////lay anh cong ty ra
 //	$filename1 = $_FILES['Edit_AnhCongTy']['name'];
 /////	$filetmpname1 = $_FILES['Edit_AnhCongTy']['tmp_name'];
@@ -49,6 +60,11 @@ if (isset($_POST['Update_CongViec'])) {
 	//		$a++;
 	//	}
 	//}
+	if (file_exists($_FILES['Edit_AnhCongViec']['tmp_name'])) {
+		$sql .= " AnhCongViec = '/images/$filename1'";
+		$a+=1;	
+		move_uploaded_file($filetmpname1, $folder.$filename1);
+	}
 	
     if(!empty($ten_cviec) ) 
     {
@@ -106,12 +122,32 @@ if (isset($_POST['Update_CongViec'])) {
 		  $a++;
 		}
 	}
-
+	///////
+	if(!empty($LinhVuc))
+    {
+		if($a != 0)
+			$sql .= ", NganhCongViec = '$LinhVuc'";
+		
+		else{
+		  $sql .= " NganhCongViec = '$LinhVuc'";
+		  $a++;
+		}
+	}
+	if(!empty($TinhChat))
+    {
+		if($a != 0)
+			$sql .= ", TinhChatCongViec = '$TinhChat'";
+		
+		else{
+		  $sql .= " TinhChatCongViec = '$TinhChat'";
+		  $a++;
+		}
+	}
 
 	
 	
 	$sql .=" WHERE MaCongViec= '$macongviectamthoi'";
-
+var_dump($sql);die();
 
 	if(mysqli_query($db, $sql)){
 

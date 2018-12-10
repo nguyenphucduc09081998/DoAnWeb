@@ -23,7 +23,7 @@
         header('location:TaoCongTy.php');
     }
 ?>
-    <div class="container">
+    <div class="container FDT_container">
         <form class="FDT_dang_tin" method ="post" action="" enctype="multipart/form-data">
 
               <table class="FDT_table">

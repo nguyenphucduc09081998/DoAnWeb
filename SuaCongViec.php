@@ -85,6 +85,38 @@
                             <textarea class="text" name="Soluong_update" rows="4" cols="50" placeholder="<?php echo $result['SoLuongCongViec']; ?>"></textarea>
                         </td>
                     </tr>
+					 <tr>
+                      <th>Tính chất</th>
+                      <td class="combo_box">
+                          <select class="nhap" name="tinhchat">
+                              <option value="0">Part Time</option>
+                              <option value="1">Full Time</option>
+                          </select>
+                      </td>
+                      
+                  </tr>
+			
+			
+                  <tr class="Nganh">
+                      <th>Lĩnh vực</th>
+                      <td class="combo_box">
+                          <select  name="linh_vuc">
+                              <option value="1">Công nghệ thông tin</option>
+                              <option value="2">Điện tử - kĩ thuật</option>
+                              <option value="3">Ngân hàng - tài chính</option>
+                              <option value="4">Kinh tế</option>
+                          </select>
+                      </td>
+                  </tr>
+					
+					<tr>
+                        <th>Ảnh Công Việc</th>
+                        <td>
+							<img src="<?php echo $result['AnhCongViec']; ?>" style="width:350px; height: 200px;">
+							<input type="file" name="Edit_AnhCongViec" style="margin:10px 0;">
+                        </td>
+                    </tr>
+					
 					<!---
 					<div class="QLHS_submit">          
 				 <button type="submit" class="btn" name="Update_CongTy">Sửa Công Ty</button><br>
