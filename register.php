@@ -38,16 +38,16 @@ $(document).ready(function() {
 </head>
 <body>
 	<section>
-		<div class="container ">
+		<div class="container register_con">
 			<div class="row">
-				<div class="col-md-3">
-				</div>
+				
 				<div class="col-md-6">
 					<form  method="post" action="register.php" class="form_register">
-						<?php include('errors.php'); ?>
-						<br><br>
-						<h2>Register</h2>
 						
+						<br><br>
+						
+						<h2 style="font-family: 'Open Sans Condensed', sans-serif; font-size:60px">Đăng Kí </h2>
+						<h3 style="color:red;"><?php include('errors.php'); ?></h3>
 						<label>Username</label><br>
 						<input type="text" name="username" id="username" placeholder="Username" required><br>
 						<div class="thongbao" style="color:red;"></div>
@@ -61,8 +61,6 @@ $(document).ready(function() {
 						<p>Already a member? <a href="/login.php">Sign in</a></p> <br>
 						
 					</form>
-				</div>
-				<div class="col-md-3">
 				</div>
 				
 			</div>

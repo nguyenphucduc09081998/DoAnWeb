@@ -14,9 +14,9 @@
 				</div>
 				<div class="col-md-6  ">
 					<form method="post" action="login.php" class="form_login">
-						<?php include('errors.php'); ?>
-						<h1>Đăng Nhập</h1>
 						
+						<h1>Đăng Nhập</h1>
+						<h3 style="color:red"><?php include('errors.php'); ?></h3>
 						<label><h3>Username</h3></label><br>
 						<input type="text" placeholder="Username" name="username" required><br>
 						
@@ -26,10 +26,10 @@
 						<!--<label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>--->
 						<button type="submit" class="btn" name="login_user" ><h3>Đăng Nhập</h3></button><br><br>
 						<div class="col-md-6">
-							<span class="psw"><a href="/register.php"><h4>Đăng Kí</h4></a></span>
+							<span class="psw" ><a href="/register.php"><h4 style="color:white">Đăng Kí</h4></a></span>
 						</div>
 						<div class="col-md-6">
-							<span class="psw"><a href=""><h4>Đổi Mật Khẩu</h4></a></span>
+							<span class="psw"><a href=""><h4 style="color:white">Đổi Mật Khẩu</h4></a></span>
 						</div>
 					</form>
 				</div>

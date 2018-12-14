@@ -30,7 +30,7 @@
 	
 	
 			<div class="container QLHS_thongtin">
-        <h1>Thông tin hồ sơ</h1>
+        <h1 style="font-family: 'Unlock', cursive;">Thông tin hồ sơ</h1>
         <form method="post" action=""  enctype="multipart/form-data">
 		
 			
@@ -50,7 +50,7 @@
                         $Username = $changearr['Username'];
                   ?>
 				   
-                <h3 class="QLHS_header"> Thông tin tài khoản</h3><br>
+                <h3 class="QLHS_header" style="font-family: 'Unlock', cursive;"> Thông tin tài khoản</h3><br>
                 Tên tài khoản:
                 <input type="text" name="ten_TK_update" placeholder="<?php echo $Username; ?>" value="" disabled />
               <!---  <input type="button" name="changePass" value="Đổi mật khẩu"/>--->
@@ -58,9 +58,9 @@
 
                 <div class="QLHS_IconCongTy col-md-4">
 					<br><br>
-					<p><b>Icon Công Ty</b></p>
+					<p style="font-family: 'Unlock', cursive;"><b>Icon Công Ty</b></p>
                     <img src="<?php echo $result['IconCongTy']; ?>" style="border: 1px solid red; height:200px; width: 200px;"  />
-					<h5>Edit Icon</h5><input type="file" name="icon_congty_udate">
+					<h5 style="font-family: 'Unlock', cursive;">Edit Icon</h5><input type="file" name="icon_congty_udate">
                 </div><!--end class QLHS_IConCongTy-->
             </div><!--end class QLHS_img-->
 
@@ -69,7 +69,7 @@
                 <table class="QLHS_table">
 				<h1 color="red"><?php include('errors.php'); ?></h1>
                     <tr>
-                        <th>Tên công ty</th>
+                        <th style="font-family: 'Unlock', cursive;">Tên công ty</th>
                         <td>
                             <?php
                             $tencty = $result['TenCongTy'];
@@ -79,7 +79,7 @@
 
                     </tr>
                     <tr>
-                        <th>Địa chỉ công ty</th>
+                        <th style="font-family: 'Unlock', cursive;">Địa chỉ công ty</th>
                         <td>
                             <?php
                             $DiaChi = $result['DiaChiCongTy'];
@@ -89,13 +89,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Thời gian làm việc</th>
+                        <th style="font-family: 'Unlock', cursive;">Thời gian làm việc</th>
                         <td>
                             <textarea class="text" name="thoigian_lamviec_update" rows="4" cols="50" placeholder="<?php echo $result['TGLamViecCongTy']; ?>"></textarea>
                         </td>
                     </tr>
                     <tr>
-                        <th>Đãi ngộ</th>
+                        <th style="font-family: 'Unlock', cursive;">Đãi ngộ</th>
                         <td>
                             <textarea class="text" name="dai_ngo_update" rows="4" cols="50" placeholder="<?php echo $result['DaiNgoCongTy']; ?>"></textarea>
                         </td>
@@ -103,7 +103,7 @@
 					
 					
 					 <tr>
-                        <th>Ảnh Công Ty</th>
+                        <th style="font-family: 'Unlock', cursive;">Ảnh Công Ty</th>
                         <td>
 							<img src="<?php echo $result['AnhCongTy']; ?>" style="width:350px; height: 200px;">
 							<input type="file" name="Edit_AnhCongTy" style="margin:10px 0;">
@@ -119,7 +119,7 @@
 
  
             <div class="QLHS_submit">          
-				 <button type="submit" class="btn" name="Update_CongTy">Sửa Công Ty</button><br>
+				 <button type="submit" class="btn btn_QLHS_update" name="Update_CongTy" >Sửa Công Ty</button><br>
             </div>
         </form>
 

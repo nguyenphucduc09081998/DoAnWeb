@@ -373,11 +373,20 @@ margin-top: 1px;
 	margin-bottom:10px;
 }
 
+/*----------------------------form ng xin viec-------------------------------*/
 
+.btn_formnguoixinviec_nap{
+	margin-top:10px;
+	height: 44px;
+	width: 126px; 
+	background-color: rgb(164, 220, 136);
+}
 
-
-
-
+.btn_formnguoixinviec_nap:hover{
+	background-color: rgb(164, 172, 136);
+	
+}
+/*----------------------------sua cong viec-------------------------------*/
 
 
 

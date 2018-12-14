@@ -65,7 +65,7 @@ include('header.php');
 					</tr>
 					
 					<tr>
-						<td colspan="2"class="row_end" ><button class="btn_submit" type="submit" name="NapHoSo">Nạp Hồ Sơ</button></td>
+						<td colspan="2"class="row_end" ><button class="btn_submit btn_formnguoixinviec_nap" type="submit" name="NapHoSo">Nạp Hồ Sơ</button></td>
 					</tr>
 				</table>
 				

@@ -39,22 +39,36 @@
 				<i class="icon-sprite-new icon-ntv-green"></i>
 					<a rel="nofollow" href="/TimViec.php" title="Trang tim viec"><img src="images/users.png" height="25" width="25">Tìm Việc</a>	
 				</div>
-				<div class="col-md-2">
-					<a rel="nofollow" href="/NhaTuyenDung.php" title="Trang tuyển dụng"><img src="images/admin.png" height="25" width="25" />Tuyển Dụng</a><!--rel="nofollow" là gì-->
-				</div>
-				<div class="col-md-2">
-					<a id="dangnhap" href="/login.php" <!--target="targetframe"-->  <img src="images/password.png" height="25" width="25" /> Đăng Nhập</a>				
-				<!------>
-			<?php
-		
-		?>
-
 				
-				<!------------->
-				</div>
 				<div class="col-md-2">
-					<a id="dangki" href="/Logout.php"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Xuất </a>	
+					<a rel="nofollow" href="/NhaTuyenDung.php" title="Trang tuyển dụng"><img src="images/admin.png" height="25" width="25"  />Tuyển Dụng</a><!--rel="nofollow" là gì-->
+				</div>
+				
+				<?php
+				if(!empty($_SESSION['username'])){
+					
+					?>
+					
+						<div class="col-md-2">
+			
+					<a id="dangnhap" href="/logout.php" <!--target="targetframe"-->  <img src="images/password.png" height="25" width="25"   /> Đăng Xuất</a>
+				
 				</div>	
+				<?php
+				}else{
+					?>
+					<div class="col-md-2">
+					<a id="dangki" href="/Login.php"  <!--target="targetframe"-->  <img src="images/logout.png" height="25" width="25" />Đăng Nhập </a>	
+				</div>	
+				<?php
+				}
+				?>
+				
+								
+		
+		
+		
+				
 			</div>
 		</div>
 	</nav>

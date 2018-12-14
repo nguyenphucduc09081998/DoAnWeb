@@ -7,6 +7,7 @@
  */
 
 	include('header.php');	
+	
 	include('serUpdate_CongViec.php');
 	$db = mysqli_connect("localhost","root","","dataweb");//ket noi data
 	mysqli_set_charset($db, "utf8");	
@@ -125,7 +126,7 @@
 			</div><!--end class QLHS_chitiet-->	
 			</div>
 			<div class="QLHS_submit_UpdateCongViec">          
-				 <button type="submit" class="btn" name="Update_CongViec">Sửa Công Ty</button><br>
+				 <button type="submit" class="btn suacongviec_updatecongviec" name="Update_CongViec">Sửa Công Ty</button><br>
 				</div>
         </form>
 

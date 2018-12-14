@@ -5,9 +5,10 @@ body h1{
 .form_login{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	border: 2px solid #e5e5e5;	
-	padding: 20px;
-	padding-bottom: 30px;
+	border: 2px solid #e5e5e5;
+	
+	padding: 50px;
+	
 	margin: 30px;
 
 }
@@ -32,4 +33,20 @@ button {
 button:hover {
     opacity: 0.5;
 }
+body{
+	/* The image used */
+  background-image: url("../images/1_duong_minh_phuc_1.jpg");
 
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+	
+}
+.psw{
+	
+}

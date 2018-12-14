@@ -19,6 +19,7 @@
   
         <form class="TCT_dang_tin" method ="post" action="" enctype="multipart/form-data">
         <div class="TCT_dang_tin" >
+			<h1 class="TCP_TAOCONGTY">Bạn Cần Tạo Công Ty</h1>
 			<h1 color="red"><?php include('errors.php'); ?></h1>
             <h3 class="TCT_title">Thông tin tài khoản</h3>
             <table>
@@ -107,7 +108,7 @@
 
             <div class="TCT_submit">
 
-             <button type="submit" class="btn" name="Insert_CongTy">Thêm Công Ty</button><br>
+             <button type="submit" class="btn BTN_TCT_CREATEE" name="Insert_CongTy">Thêm Công Ty</button><br>
             </div>
       
              

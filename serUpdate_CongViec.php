@@ -147,7 +147,6 @@ if (isset($_POST['Update_CongViec'])) {
 	
 	
 	$sql .=" WHERE MaCongViec= '$macongviectamthoi'";
-var_dump($sql);die();
 
 	if(mysqli_query($db, $sql)){
 

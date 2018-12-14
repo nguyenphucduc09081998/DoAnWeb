@@ -27,3 +27,17 @@
     margin-right: auto;
 
 }
+.TCP_TAOCONGTY{
+	text-align:center;
+	font-family: 'Charm', cursive;color:#95dabb; margin-left:30px
+}
+.BTN_TCT_CREATEE{
+	background-color: #6f7b99;
+	height: 40px;
+	width: 150px;
+}
+.BTN_TCT_CREATEE:hover{
+	background-color: #627b99;
+	height: 43px;
+	width: 153px;
+}

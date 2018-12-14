@@ -1,14 +1,13 @@
  .form_register{
 	margin:auto;
 	width: 300px;
-	border: 1px solid #e5e5e5;
-	padding: 10px;
+	
 	
 	
 }
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 15px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -30,3 +29,24 @@ button{
 button:hover {
     opacity: 0.8;
 }
+.register_con{
+	margin-top: 30px;
+}
+body{
+	/* The image used */
+  background-image: url("../images/mZOobZm.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+	
+}
+
+
+
+

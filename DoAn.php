@@ -5,6 +5,10 @@ include('header.php');
 	<!-----------------------chia tung cot cong ty----------------------------------->
 	
 <script type="text/javascript" src="js/DoAn.js"></script>
+
+		
+
+
 	<section >
 		<div class="container">
 
@@ -31,7 +35,10 @@ include('header.php');
 					$img = mysqli_query($db,"SELECT * FROM congty LIMIT $offset, $no_of_records_per_page");
 
 					while($row = mysqli_fetch_array($img))
-					{			
+					{		
+						?>
+						
+						<?php
 						$b =  $row['MaCongTy'];
 						$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b");
 						$cou1 = mysqli_fetch_array($cou);
@@ -48,6 +55,9 @@ include('header.php');
 						
 						<?php
 						}
+						?>
+						
+						<?php
 					}
 					?>
 					
@@ -75,12 +85,9 @@ include('header.php');
     </section>
 	<div class="col-md-1 pull-right" style="">
 	
-	
 		<button onclick="topFunction()" id="backtotop" title="Go to top" >
 			<img src="/images/icons8-up-64.png" width="20" height="20">
-		</button>
-		
-		
+		</button>	
 	</div>
 	
 	<script>

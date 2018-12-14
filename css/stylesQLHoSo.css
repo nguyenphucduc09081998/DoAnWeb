@@ -57,3 +57,35 @@ h1{
 	height:30px;
 	margin-left:100px;
 }
+.btn_QLHS_update{
+	
+	margin-top:10px;
+	height: 44px;
+	width: 126px; 
+	background-color: rgb(164, 220, 136);
+}
+.btn_QLHS_update:hover{
+	background-color: rgb(164, 172, 136);
+	
+}
+.QLHS_thongtin{
+	margin-bottom: 70px;
+}
+
+.suacongviec_updatecongviec{
+	margin:auto;
+	margin-top: 15px;
+	height: 40px;
+	width: 120px;
+	background-color: #62a099;
+}
+.suacongviec_updatecongviec:hover{
+	
+	height: 45px;
+	width: 125px;
+	background-color: #799e87;
+}
+
+
+
+

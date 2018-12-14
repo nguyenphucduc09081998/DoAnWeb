@@ -37,7 +37,7 @@
 		}	
 		else // Ngược lại user_name Ko tồn tại
 		{
-			echo "<span><strong>Username: {$user}</strong> co the dung!</span>";	
+			//echo "<span><strong>Username: {$user}</strong> co the dung!</span>";	
 		}
 	}
 
