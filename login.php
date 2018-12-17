@@ -29,7 +29,7 @@
 							<span class="psw" ><a href="/register.php"><h4 style="color:white">Đăng Kí</h4></a></span>
 						</div>
 						<div class="col-md-6">
-							<span class="psw"><a href=""><h4 style="color:white">Đổi Mật Khẩu</h4></a></span>
+							<span class="psw"><a href="/DoMatKhau.php"><h4 style="color:white">Đổi Mật Khẩu</h4></a></span>
 						</div>
 					</form>
 				</div>

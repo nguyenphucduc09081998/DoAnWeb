@@ -1,24 +1,16 @@
 <?php
 include('header.php');
 ?>
-
 <link rel="stylesheet" href="css/stylesXemUngTuyen.css">
 <?php
-	
 	$db = mysqli_connect('localhost', 'root', '', 'dataweb');
 	mysqli_set_charset($db, "utf8");
 	$a = $_GET['idXemUngTuyenCongViec'];
-
-
-
 	$query = "SELECT * FROM nguoixinviec WHERE MaCongViec = '$a'";
-
-
 	$img = mysqli_query($db,$query);
 ?>
 	<div class="container ">
-	<div class="row XUT_title">	
-	
+	<div class="row XUT_title">		
 		<div class="col-md-2">
 				<h4>Tên </h4>
 		</div>
@@ -37,14 +29,14 @@ include('header.php');
 		<div class="col-md-2">
 				<h4>Tuyển Dụng</h4>
 		</div>
-		</div>
-	<div class="row XUT_tungnguoixinviec">
+	</div>
+	
 	
 <?php	
 	while($row = mysqli_fetch_array($img))
 		{			
 		?>
-			
+		<div class="row XUT_tungnguoixinviec">
 			<div class="col-md-2 tungnguoi">
 				
 				<label class="tencongty"> <b> <?php echo $row["TenNguoiXinViec"]; ?></b></label>
@@ -65,11 +57,7 @@ include('header.php');
 				<a href= "" class="btn btn-info">Gởi Mail</a>
 				
 			</div>
-			
-			
-			
-			
-
+		</div>	
 		<?php		
 	}
 	//$user = $_SESSION['username'];
@@ -81,20 +69,6 @@ include('header.php');
 	
 	</div>
 	</div>
-	</div>
-
-
-	
-	
-	
-	
-
-
-
-
-
-
-
 <?php
 include('footer.php');
 ?>

@@ -7,7 +7,7 @@
 	position: relative;
 }
 .a:hover{
-	
+	opacity: 0.2;
 }
 .tencongty{
 	text-align: center;
