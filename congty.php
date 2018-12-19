@@ -39,7 +39,7 @@ include('header.php');
 			{		
 		?>
 			
-			<div class="col-md-8 congty_chung ">
+			<div class="col-md-12 congty_chung ">
 				<div class="tencongviec_tencongty">
 					<a class="tencongviec" href="/congviec.php?idCongViec= <?php echo $row['MaCongViec']; ?>"> 
 						<h5><?php echo $row["TenCongViec"]; ?> </h5>

@@ -33,7 +33,8 @@
 
 .tencongviec_tencongty .tencongviec{
 	text-decoration: none;
-	color: black;
+	color: #d8c371;
+	
 }
 .tencongviec_tencongty .chitietcongviec{
 	text-decoration: none;
@@ -46,6 +47,8 @@
 }
 .tencongviec h5:hover{
 	color: blue;
+	font-family: 'Major Mono Display', monospace;
+	font-size: 40px;
 }
 .chitietcongviec h6{
 	font-size: 20px;

@@ -84,7 +84,8 @@
 						 <input type="text" name="txtsearch" class="form-control" placeholder="search...">
 					</div>
 					<div class="col-md-2">
-						<button type="submit" class="btn btn-info" name="btn_search">Search</button>
+					
+						<button type="submit" class="btn btn-info" name="btn_search">Tìm Kiếm</button>
 					</div>
 				</form>
 				<div class="col-md-2">

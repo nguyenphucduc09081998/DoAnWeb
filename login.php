@@ -1,4 +1,4 @@
-<?php include('serverLogin_Register.php'); ?>
+﻿<?php include('serverLogin_Register.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +17,11 @@
 						
 						<h1>Đăng Nhập</h1>
 						<h3 style="color:red"><?php include('errors.php'); ?></h3>
-						<label><h3>Username</h3></label><br>
-						<input type="text" placeholder="Username" name="username" required><br>
+						<label><h3>Tài Khoản</h3></label><br>
+						<input type="text" placeholder="Tài Khoản" name="username" required><br>
 						
-						<label><h3>Password</h3></label><br>
-						<input type="password" placeholder="Password" name="password" required ><br><br>
+						<label><h3>Mật Khẩu</h3></label><br>
+						<input type="password" placeholder="Mật Khẩu" name="password" required ><br><br>
 						
 						<!--<label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>--->
 						<button type="submit" class="btn" name="login_user" ><h3>Đăng Nhập</h3></button><br><br>

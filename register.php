@@ -1,4 +1,4 @@
-<?php include('serverLogin_Register.php'); ?>
+﻿<?php include('serverLogin_Register.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,17 +48,17 @@ $(document).ready(function() {
 						
 						<h2 style="font-family: 'Open Sans Condensed', sans-serif; font-size:60px">Đăng Kí </h2>
 						<h3 style="color:red;"><?php include('errors.php'); ?></h3>
-						<label>Username</label><br>
-						<input type="text" name="username" id="username" placeholder="Username" required><br>
+						<label>Tài Khoản </label><br>
+						<input type="text" name="username" id="username" placeholder="Tài Khoản " required><br>
 						<div class="thongbao" style="color:red;"></div>
-						<label>Password</label><br>
-						<input type="password" name="password_1" placeholder="Password" required><br>
+						<label>Mật Khẩu </label><br>
+						<input type="password" name="password_1" placeholder="Mật Khẩu " required><br>
+					
+						<label>Nhập Lại Mật Khẩu</label><br>
+						<input type="password" name="password_2" placeholder="Nhập Lại Mật Khẩu" required><br>
 						
-						<label>Confirm password</label><br>
-						<input type="password" name="password_2" placeholder="Confirm Password" required><br>
-						
-						 <button type="submit" class="btn" name="reg_user">Register</button><br>
-						<p>Already a member? <a href="/login.php">Sign in</a></p> <br>
+						 <button type="submit" class="btn" name="reg_user">Đăng Kí</button><br>
+						<p>Bạn có thể đăng nhập:  <a href="/login.php">Đăng Nhập</a></p> <br>
 						
 					</form>
 				</div>
