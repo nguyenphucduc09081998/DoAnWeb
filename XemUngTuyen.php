@@ -26,9 +26,7 @@ include('header.php');
 		<div class="col-md-2">
 				<h4>Kinh Nghiệm </h4>
 		</div>
-		<div class="col-md-2">
-				<h4>Tuyển Dụng</h4>
-		</div>
+		
 	</div>
 	
 	
@@ -53,10 +51,7 @@ include('header.php');
 			<div class="col-md-2 tungnguoi">
 				<label class="tencongty"> <b> <?php echo $row["KinhNghiemNguoiXinViec"]; ?></b></label>
 			</div>
-			<div class="col-md-2 tungnguoi">
-				<a href= "" class="btn btn-info">Gởi Mail</a>
-				
-			</div>
+			
 		</div>	
 		<?php		
 	}

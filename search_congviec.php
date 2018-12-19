@@ -17,7 +17,7 @@
 		<?php
             while($results = mysqli_fetch_array($raw_results)){
             ?>              
-				
+			<div class="Search_tungcongviec">
 				<div class="col-md-6">
 					<div class= "TimViec">
 						<div class="TimViec_logo">
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-					
+					</div>
 				
             <?php
 			}

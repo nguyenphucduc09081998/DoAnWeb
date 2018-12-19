@@ -42,7 +42,7 @@
 					</div>
 				</div>
 			</div>
-				<span class="copyright">@2018 Đồ Án Công Nghẹ Wed và Ứng Dụng</span>
+				<span class="copyright">Copyright ©2018 Đồ Án Công Nghẹ Wed và Ứng Dụng</span>
 		</footer>
 </body>
 </html>

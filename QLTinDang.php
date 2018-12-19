@@ -1,7 +1,8 @@
 <?php
 include('header.php');
-
-
+?>
+<link rel="stylesheet" href="css/stylesQLTinDang.css">
+<?php
 //lấy thông tin đăng nhập
 	
     $user = $_SESSION['username'];
@@ -66,16 +67,8 @@ include('header.php');
 									<p class="QLTinDang_YeuCauCongViec"><?php echo $row['YeuCauCongViec'];?></p>	
 									</div>		
 							</div>
-						</div>	
-
-<!--để làm chức năng sổ xuông
-<div class="col-md-2">					
-						<button type="button" class="run btn btn-info">Info</button>						
-						
-						</div>
--->						
-						
-						<div class="col-md-4">	
+						</div>				
+						<div class="col-md-4 QLTinDang_button_xem">	
 												
 								<a href="/XemUngTuyen.php?idXemUngTuyenCongViec=<?php echo $row['MaCongViec'];?>" class="btn btn-info">
 									Xem Ứng Tuyển
