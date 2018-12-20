@@ -39,7 +39,10 @@ body{
 
 }
 
-.slide_show{width: 800px;}
+.slide_show{
+	width: 500px;
+	height: 300px;
+}
 
 .numbers{
 

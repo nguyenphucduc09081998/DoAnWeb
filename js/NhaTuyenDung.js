@@ -22,11 +22,8 @@ function showSlide(n){
         dots[i].className = dots[i].className.replace(" active","");
 
     };
-
     slides[slideIndex-1].style.display = "block";
-
     dots[slideIndex-1].className += " active";
-
 }
 
 function changeImage()
@@ -34,23 +31,18 @@ function changeImage()
     var img = document.getElementById("myslide");
     img.src = images[x];
     x++;
-
     if(x >= images.length){
         x = 0;
     }
-
     fadeImg(img, 100, true);
     setTimeout("changeImage()", 30000);
 }
-
-
 function fadeImg(el, val, fade){
     if(fade === true){
         val--;
     }else{
         val ++;
     }
-
     if(val > 0 && val < 100){
         el.style.opacity = val / 100;
         setTimeout(function(){fadeImg(el, val, fade);}, 10);

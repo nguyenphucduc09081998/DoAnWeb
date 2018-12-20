@@ -44,9 +44,9 @@ include ('header.php');
 
             <div class="numbers">1 / 4</div>
 
-            <div><img class="slide_show" src="images/1.jpg"></div>
+            <div><img class="slide_show" style="height:598px; width:800px;" src="images/11.jpg"></div>
 
-            <div class="caption">Text 1</div>
+            <div class="caption">Công Ty SEEBEST</div>
 
         </div>
 
@@ -55,9 +55,9 @@ include ('header.php');
 
             <div class="numbers">2 / 4</div>
 
-            <div><img class="slide_show" src="images/2.jpg"></div>
+            <div><img class="slide_show" style="height:598px; width:800px;" src="images/22.jpg"></div>
 
-            <div class="caption">Text 2</div>
+            <div class="caption">Tòa Nhà Bitexco</div>
 
         </div>
 
@@ -66,9 +66,9 @@ include ('header.php');
 
             <div class="numbers">3 / 4</div>
 
-            <div><img class="slide_show" src="images/3.jpg"></div>
+            <div><img class="slide_show" style="height:598px; width:800px;" src="images/33.jpg"></div>
 
-            <div class="caption">Text 3</div>
+            <div class="caption">Công Ty Điện Lực</div>
 
         </div>
 
@@ -77,9 +77,9 @@ include ('header.php');
 
             <div class="numbers">4 / 4</div>
 
-            <div><img class="slide_show" src="images/4.jpg"></div>
+            <div><img class="slide_show" style="height:598px; width:800px;" src="images/44.jpg"></div>
 
-            <div class="caption">Text 4</div>
+            <div class="caption">Công Ty InTel</div>
 
         </div>
 

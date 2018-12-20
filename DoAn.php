@@ -11,7 +11,6 @@ include('header.php');
 
 	<section >
 		<div class="container">
-
 			<h3 style="font-family: 'Pacifico', cursive;color:#ade600; font-size: 40px; ">Nhà Tuyển Dụng</h3>
 			<div class="row">
 				
@@ -23,8 +22,7 @@ include('header.php');
 						$pageno = $_GET['pageno'];
 					} else {
 						$pageno = 1;
-					}
-					
+					}		
 					$no_of_records_per_page = 6;//số tin trong 1 trang
 					$offset = ($pageno-1) * $no_of_records_per_page; // để bắt đầu lấy từ bao nhiêu
 					$total_pages_sql = "SELECT COUNT(*) FROM congty";
@@ -35,10 +33,7 @@ include('header.php');
 					$img = mysqli_query($db,"SELECT * FROM congty LIMIT $offset, $no_of_records_per_page");
 
 					while($row = mysqli_fetch_array($img))
-					{		
-						?>
-						
-						<?php
+					{	
 						$b =  $row['MaCongTy'];
 						$cou = mysqli_query($db, "select COUNT(*) as soluong from congviec where MaCongTy = $b");
 						$cou1 = mysqli_fetch_array($cou);
@@ -51,13 +46,9 @@ include('header.php');
 									<img class="back-gr" src=" <?php echo $row["IconCongTy"];?>">
 								</div>
 							</a>
-						</form>
-						
+						</form>						
 						<?php
-						}
-						?>
-						
-						<?php
+						}					
 					}
 					?>
 					

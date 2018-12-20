@@ -1,12 +1,19 @@
 .fNXV_table{
+	text-align:center;
+	margin:auto;
+}
+.FNXV_BORDER{
 	margin:auto;
 	border:2px solid red;
-	background-color: #ddd;
-	width: 499px;
+	background-color:#ddd;
+	width: 600px;
 	text-align:center;
-		margin-top: 30px;
-		padding-bottom: 30px;
+	margin-top: 30px;
+	margin-left: 220px !important;
+	padding-bottom: 30px;
+	
 }
+
 .fNXV_table .title{
 	font-size: 25px; 
 	padding: 10px 10px;

@@ -7,8 +7,8 @@ include('header.php');
     include('serverInsert_NguoiXinViec.php');
  ?>
 <section>
-	<div class="container">
-		<div class="row">
+	<div class="container FNXV_BORDER_con">
+		<div class="row FNXV_BORDER">
 			<form method="post" action="formNguoiXinViec.php" enctype="multipart/form-data">
 								
 				<table class="fNXV_table" >

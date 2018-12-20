@@ -81,7 +81,7 @@
 				</div>	
 				<form action="/search_congviec.php" method="post">	
 					<div class="col-md-6">
-						 <input type="text" name="txtsearch" class="form-control" placeholder="search...">
+						 <input type="text" name="txtsearch" class="form-control" placeholder="Tìm Kiếm Theo Tên Công Việc">
 					</div>
 					<div class="col-md-2">
 					
