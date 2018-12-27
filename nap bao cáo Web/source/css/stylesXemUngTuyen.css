@@ -1,0 +1,18 @@
+
+.XUT_title{
+	margin-top:30px;
+	margin-bottom:10px;
+	color:red;
+}
+.XUT_title h4{
+	margin-left:10px;
+	font-family: 'Major Mono Display', monospace;
+}
+.XUT_tungnguoixinviec{
+	padding-top:20px;
+	margin-top:5px;
+	border: 1px solid #ddd;
+}
+.tungnguoi{
+	padding-bottom:10px;
+}

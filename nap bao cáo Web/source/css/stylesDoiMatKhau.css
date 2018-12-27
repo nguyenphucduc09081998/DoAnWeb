@@ -1,0 +1,52 @@
+body h1{
+	text-align: center;
+	font: bold ;
+}
+.form_login{
+	
+	margin-bottom: 20px;
+	border: 2px solid #e5e5e5;
+	
+	padding: 50px;
+	
+	margin: 30px;
+
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.5;
+}
+body{
+	/* The image used */
+  background-image: url("../images/1_duong_minh_phuc_1.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+	
+}
+.psw{
+	
+}

@@ -1,0 +1,48 @@
+.imga{
+	margin-top: 50px;
+}
+
+.a{
+	border: 1px solid #ddd;
+	position: relative;
+}
+.a:hover{
+	opacity: 0.2;
+}
+.tencongty{
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
+	left: 130px;
+}
+.back-gr{
+	height: 300px;
+	width: 100% ;
+}
+.form_chung:hover{
+	border: 3px solid #ddd;
+}
+.phantrang{
+	
+	text-align:center;
+}
+#backtotop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+.DA_hover:hover{
+	
+}
+
+

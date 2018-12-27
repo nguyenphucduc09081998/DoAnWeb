@@ -1,0 +1,38 @@
+.fNXV_table{
+	text-align:center;
+	margin:auto;
+}
+.FNXV_BORDER{
+	margin:auto;
+	border:2px solid red;
+	background-color:#ddd;
+	width: 600px;
+	text-align:center;
+	margin-top: 30px;
+	margin-left: 220px !important;
+	padding-bottom: 30px;
+	
+}
+
+.fNXV_table .title{
+	font-size: 25px; 
+	padding: 10px 10px;
+}
+.fNXV_table td{
+	padding: 5px 0;
+}
+.fNXV_table .ten{
+	font-size: 20px;
+}
+.fNXV_table .nhap{
+ height: 40px;
+ width: 250px;
+}
+.fNXV_table .btn_submit{
+	background: #cc9999;
+	height: 50px;
+	width: 150px;
+}
+.fNXV_table .row_end{
+	padding: 30px 0;
+}

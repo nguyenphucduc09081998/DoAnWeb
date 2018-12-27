@@ -1,0 +1,401 @@
+/*-nav-------------------------------------*/
+nav a{
+	color: black;
+}
+.menu{
+	border-bottom:1px solid #ddd;
+	padding-top: 25px;
+}
+.home{
+	margin-top: -22px !important;
+}
+/*----------header--------------------------*/
+
+header .search{
+	border-bottom: 1px solid #ddd;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+/*------nav-menu--------*/
+
+.nav_menu {
+	border-bottom: 1px solid #e5e5e5;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.nav_menu a{
+	color: black;
+	text-decoration:none;
+}
+
+
+/*-------------------------NganhCNTT.php---------------------------*/
+.NCNTT_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NCNTT_TatCa{
+	margin-top: 30px;
+}
+.NCNTT_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NCNTT_TungCongViec .NCNTT_TenCongViec {
+	text-decoration: none;
+}
+.NCNTT_TungCongViec .NCNTT_TenCongTy{
+	text-decoration: none;
+}
+.NCNTT_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NCNTT_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NCNTT_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NCNTT_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NCNTT_MiniTitle{
+	font-size: 40px;
+	
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NCNTT_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*-------------------------Nganh điện tử.php---------------------------*/
+.NDienTu_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+
+.NDienTu_TatCa{
+	margin-top: 30px ;
+}
+
+.NDienTu_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NDienTu_TungCongViec .NDienTu_TenCongViec {
+	text-decoration: none;
+}
+.NDienTu_TungCongViec .NDienTu_TenCongTy{
+	text-decoration: none;
+}
+.NDienTu_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NDienTu_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NDienTu_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NDienTu_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NDienTu_MiniTitle{
+	font-size: 40px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NDienTu_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*-------------------------Nganh tài chính Ngân hàng.php---------------------------*/
+.NNHTC_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+
+.NNHTC_TatCa{
+	margin-top: 30px ;
+}
+
+.NNHTC_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NNHTC_TungCongViec .NNHTC_TenCongViec {
+	text-decoration: none;
+}
+.NNHTC_TungCongViec .NNHTC_TenCongTy{
+	text-decoration: none;
+}
+.NNHTC_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NNHTC_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NNHTC_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NNHTC_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NNHTC_MiniTitle{
+	font-size: 40px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NNHTC_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*-------------------------Nganh Kinh Tế.php---------------------------*/
+.NganhKinhTe_title{
+	font-size: 50px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+
+.NganhKinhTe_TatCa{
+	margin-top: 30px ;
+}
+
+.NganhKinhTe_TungCongViec{
+	border: 2px solid #ddd;
+	margin-bottom: 30px;
+	height: 100px;
+	width: 100%;
+	text-align:center;
+	background: #d9d0d2;
+}
+.NganhKinhTe_TungCongViec .NganhKinhTe_TenCongViec {
+	text-decoration: none;
+}
+.NganhKinhTe_TungCongViec .NganhKinhTe_TenCongTy{
+	text-decoration: none;
+}
+.NganhKinhTe_TenCongViec h3{
+	font-size: 40px;
+	color: #2d71bd;
+}
+.NganhKinhTe_TenCongViec h3:hover{
+	font-family: TERTRE FONT;
+	color: #c99fa8;
+}
+.NganhKinhTe_TenCongTy h3{
+	font-family: TERTRE FONT;
+	color: #2d71bd;	
+}
+.NganhKinhTe_TenCongTy h3:hover{
+	font-family: BEBAS FONT;
+	color: #bda02d;	
+}
+
+.NganhKinhTe_MiniTitle{
+	font-size: 40px;
+	text-align:center;
+	font-family: OBLIC SERIF;
+	color:#57a3dd;
+	margin-top: 50px;
+}
+.NganhKinhTe_iconcongty{
+	margin-top: 30px;
+	border: 1px solid red;
+	height: 200px;
+	margin-left:50px;
+	width: 250px;
+}
+/*----------------------------gape Tim Viec-------------------------------*/
+.NguoiTimViec{
+		text-decoration: none;
+	font-family: 'Charmonman', cursive;
+	margin-top: 20px;
+	text-align:center;
+	font-size:30px;
+	}
+.NguoiTimViec a{
+
+	color:#95e6d9;
+	
+}
+.NguoiTimViec a:hover{
+	font-size: 31px;
+	
+	
+}
+
+.TimViec_title{
+		padding-top: 70px;
+	color:black;
+	font-size: 50px;
+	font-family: cursive;
+	text-align:center;
+}
+.TimViec_iconcongty{
+	height:100px; width:100px;
+	margin-top: 20px;
+	border: 1px solid red;
+}
+.TimViec{
+margin-top: 20px;
+margin-bottom: 20px;
+border: 1px solid #ddd;
+padding-left: 40px;
+padding-bottom: 30px;
+padding-top: 30px;
+}
+.TimViec_iconcongty:hover{
+	border: 1px solid #ddd;
+}
+.TimViec_logo{
+	position:relative;
+}
+.TimViec_logo .TimViec_tencongviec{
+	text-align:center;
+	position: absolute;	
+	left: 150px;
+	color: red;
+	text-decoration:none;
+}
+.TimViec_logo .TimViec_tencongviec h5{
+	font-size: 30px;
+	font-family: Ubuntu;
+	margin-bottom: 5px;
+}
+.TimViec_logo .TimViec_tencongviec h5:hover{
+	font-size: 31px;
+	color:orange;
+	font-family: Caecilia;
+}
+.abc{
+	color:black;
+	position:absolute;
+	bottom: 30px;
+	left:160px;
+	top:65px;
+}
+.TimViec_YeuCau_MoTa{
+margin-top: 1px;
+}
+
+/*----------------------------page search cong viec-------------------------------*/
+.search_congviec {
+	margin-top: 5px;
+	background: #ddd;
+	border: 1px solid #ddd;
+}
+.Search_tungcongviec{
+	
+}
+
+/*----------------------------page QL tin đăng-------------------------------*/
+
+.QLTinDang_title{
+	margin: 30px 0;
+	margin-left:100;
+	text-align: center;
+	font-family: Comic sans MS;
+	color:red;
+}
+.QLTinDang_paddingg{
+	margin-top:20px;
+	padding-top:10px;
+}
+.QLTinDang_TenCongViec{
+	font-size:30px;
+	text-align:center;
+}
+.QLTinDang_MucLuongCongViec .QLTinDang_YeuCauCongViec{
+	font-size:20px;
+	text-align:center;
+}
+.QLTinDang_show-hide p{
+	font-size:20px;
+	text-align:center;
+}
+
+/*----------------------------Ứng Tuyển-------------------------------*/
+
+.XUT_title{
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+/*----------------------------form ng xin viec-------------------------------*/
+
+.btn_formnguoixinviec_nap{
+	margin-top:10px;
+	height: 44px;
+	width: 126px; 
+	background-color: rgb(164, 220, 136);
+}
+
+.btn_formnguoixinviec_nap:hover{
+	background-color: rgb(164, 172, 136);
+	
+}
+/*----------------------------sua cong viec-------------------------------*/
+
+
+
+
+
+
+
+
+
